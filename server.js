@@ -10,6 +10,7 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
+var isConnected = false;
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -26,20 +27,32 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
-
-app.get('/', routes.index);
-app.get('/users', user.list);
-app.get('/admin',function(req,res){res.render('admin', { title: 'Admin' })})
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+app.get('/', routes.index);
+app.get('/users', user.list);
+app.get('/1132',function(req,res){res.render('admin', { title: 'Admin' })});
+app.post('/push', function(req, res){
+    isConnected.emit("updateCount", req.body.user.name);
+    res.redirect('/1132');
+    
+});
+
+app.post('/pop', function(req, res){
+    isConnected.emit("negateCount", req.body.user.name);
+     res.redirect('/1132');
+});
+
+
 
 
 io.sockets.on('connection', function (socket) {
-    socket.emit('connected');
-    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
-    socket.on('stopUpdating', function () { clearInterval(timer); });
+    isConnected = socket;
+    isConnected.emit('connected');
+//    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
+//    socket.on('stopUpdating', function () { clearInterval(timer); });
 
 });

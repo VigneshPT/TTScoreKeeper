@@ -1,7 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div.count(id="countDiv") 0
-  input(type="button", id="stopBtn", onclick='stopUpdating();', value="Stop") 
+    div.row-fluid
+        div.container-fluid
+            h1 Welcome to Global English Table Tennis Tournament
+    div.row-fluid(ng-app="tt")
+        div.container-fluid(ng-controller='master')
+            div.span12
+                div.well
+                    h1 {{round}}
+                div.span6
+                    div.well
+                        h1 Player 1
+                        h2 {{player1.name}}
+                        div.span12
+                            div.span6
+                                img.img-polaroid(src='/images/men.jpg')
+                            div.span6
+                                h3 Points {{player1.points}}
+                div.span6
+                    div.well
+                        h1 Player 2
+                        h2 {{player2.name}}
+                        div.span12
+                            div.span6
+                                img.img-polaroid(src='/images/men.jpg')
+                            div.span6
+                                h3 Points {{player2.points}}
+  

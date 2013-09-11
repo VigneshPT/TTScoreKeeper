@@ -1,10 +1,21 @@
-// Jade
 extends layout
 
 block content
-    //h1=title
-    div.buttons-wrap
-        div.master-button-wrap#button1
-            div.button-content Player A
-        div.master-button-wrap#button2
-            div.button-content Player B
+   div.container-fluid
+        div.span12
+            div.span6.well
+                h1 Player1
+                form(method="post", action="/push")
+                    input(name="user[name]", value="player1",style="display:none")
+                    button.btn.btn-large.btn-block.btn-primary(type="submit") Up by one
+                form(method="post", action="/pop")
+                    input(name="user[name]", value="player1",style="display:none")
+                    button.btn.btn-large.btn-block.btn-danger(type="submit", ng-bind='minux') Down by one
+            div.span6.well
+                h1 Player2
+                form(method="post", action="/push")
+                    input(name="user[name]", value="player2",style="display:none")
+                    button.btn.btn-large.btn-block.btn-primary(type="submit") Up by one
+                form(method="post", action="/pop")
+                    input(name="user[name]", value="player2",style="display:none")
+                    button.btn.btn-large.btn-block.btn-danger(type="submit", ng-bind='minux') Down by one
