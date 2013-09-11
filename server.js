@@ -38,6 +38,7 @@ server.listen(app.get('port'), function(){
 
 
 io.sockets.on('connection', function (socket) {
+    socket.emit('connected');
     var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
     socket.on('stopUpdating', function () { clearInterval(timer); });
 

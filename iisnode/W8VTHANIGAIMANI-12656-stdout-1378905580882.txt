@@ -1,0 +1,1657 @@
+info: socket.io started
+Express server listening on port \\.\pipe\d8063750-5fb7-4906-86c7-a9bb832c7f9d
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905556715
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing 7:::1+0
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: discarding transport
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905579427&i=0
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("7:::1+0");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: discarding transport
+[90mGET / [32m200 [90m39ms - 422[0m
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/websocket/FNOhrcv2EntDYsj1LWYO
+debug: set heartbeat interval for client FNOhrcv2EntDYsj1LWYO
+debug: client authorized for 
+debug: websocket writing 1::
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+info: socket error Error: write EPIPE
+    at errnoException (net.js:901:11)
+    at Socket._write (net.js:643:26)
+    at doWrite (_stream_writable.js:219:10)
+    at writeOrBuffer (_stream_writable.js:209:5)
+    at Socket.Writable.write (_stream_writable.js:180:11)
+    at Socket.write (net.js:613:40)
+    at WebSocket.write (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\transports\websocket\hybi-16.js:190:19)
+    at WebSocket.Transport.onDispatch (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\transport.js:222:10)
+    at Socket.dispatch (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\socket.js:230:38)
+    at Socket.packet (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\socket.js:214:10)
+debug: websocket writing 5:::{"name":"connected"}
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905594955
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing �26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: cleared heartbeat interval for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905594993
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905595031
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905596048
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905597074
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905598103
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905599136
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905600171
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905601196
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905602218
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905603249
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905604277
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905604960&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: clearing poll timeout
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905605307&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905606334&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905607373&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905608414&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905609441&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905610452&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905611465&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905612487&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905613523&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905614562&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905615588&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905616618&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905617647&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905618693&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905619716&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905620737&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905621766&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905622794&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905623826&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905624856&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905625984&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905627020&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905628052&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905629090&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905630140&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905631165&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905632193&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905633216&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905634246&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905635281&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905636310&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905637333&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905638368&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905639406&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905640438&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905641472&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905642500&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905643521&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905644548&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905645586&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905646614&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905647644&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905648673&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905649686&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905650700&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905651725&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905652748&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905653769&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905654790&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905655825&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905656859&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905657883&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905658917&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905659942&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905660967&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905662002&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905663028&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905664059&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905665106&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905666147&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905667184&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905668219&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905669240&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905670282&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905671317&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905672347&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905673385&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905674420&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905675464&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905676490&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905677524&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905678550&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905679573&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905680598&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905681628&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905682654&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905683687&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905684711&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905685751&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905686775&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905687802&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905688832&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905689894&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905690920&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905691952&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905692985&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905694015&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905695039&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905696069&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905697103&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905698123&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905699156&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905700178&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905701210&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905702252&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905703274&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905704301&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905705329&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905706357&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905707385&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905708418&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905709446&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905710482&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905711512&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905712543&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905713574&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905714599&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905715624&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905716655&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905717678&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905718694&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905719714&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905720754&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905721783&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905722816&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/jsonp-polling/FNOhrcv2EntDYsj1LWYO?t=1378905723856&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905724398
+debug: setting poll timeout
+debug: discarding transport
+debug: clearing poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905724890
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905725916
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905726956
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905727984
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905729005
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905730034
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905731068
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905732093
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905733126
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905734168
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905735187
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905736211
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905737236
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905738267
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905739299
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905740336
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905741363
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905742391
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905743416
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905744444
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905745481
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905746505
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905747529
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905748553
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905749594
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905750617
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905751643
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905752679
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905753715
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905754740
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905755753
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905756781
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905757802
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905758834
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905759859
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905760887
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905761910
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905775030
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing �26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905775066
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905775166
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905776163
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905777191
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905778222
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905779252
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905780265
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905781290
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905782302
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905783328
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905784348
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905785374
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905786397
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905787427
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905788462
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905789486
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905790520
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905791549
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905792581
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905793603
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905794636
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905795663
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905796675
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905797702
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905798729
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905799754
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905800789
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905801817
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905802840
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905803876
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905804902
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905805937
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905806961
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905807991
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905809018
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905810047
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905811069
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905812087
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905813125
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905814149
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905815178
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905816208
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905817249
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905818266
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905819300
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905820329
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905821352
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905822376
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905823403
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905824417
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905825450
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905826476
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905827495
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905828517
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905829545
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905830586
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905831614
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905832646
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905833668
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905834694
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905835728
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905836750
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905837767
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client FNOhrcv2EntDYsj1LWYO
+debug: setting request GET /socket.io/1/xhr-polling/FNOhrcv2EntDYsj1LWYO?t=1378905838806
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client FNOhrcv2EntDYsj1LWYO

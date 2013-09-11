@@ -6,6 +6,6 @@ SyntaxError: Unexpected identifier
     at View.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\view.js:75:8)
     at Function.app.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\application.js:504:10)
     at ServerResponse.res.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\response.js:753:7)
-    at C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\server.js:32:40
+    at exports.index (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\routes\index.js:7:7)
     at callbacks (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\router\index.js:161:37)
     at param (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\router\index.js:135:11)

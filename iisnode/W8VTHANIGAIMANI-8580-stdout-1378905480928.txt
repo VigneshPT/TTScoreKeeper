@@ -1,0 +1,11 @@
+info: socket.io started
+Express server listening on port \\.\pipe\93bc4cfe-356e-4e43-b54f-0aca2404d86c
+debug: setting request GET /socket.io/1/jsonp-polling/A6KDtUs5CWAfKyaZKebF?t=1378905480832&i=0
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("7:::1+0");
+debug: set close timeout for client A6KDtUs5CWAfKyaZKebF
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: cleared close timeout for client A6KDtUs5CWAfKyaZKebF
+debug: discarding transport

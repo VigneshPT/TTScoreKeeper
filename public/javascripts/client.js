@@ -1,8 +1,14 @@
+var socket = io.connect('http://localhost:35105');
 function stopUpdating()
 {
-    var socket = io.connect('http://localhost:35105');
-     socket.on('news', function (data) {
-     console.log(data);
-     socket.emit('my other event', { my: 'data' });
-  }); 
+    socket.emit('stopUpdating');
 }
+socket.on('connected', function () {
+    alert('hello world');
+});
+socket.on('updateCount', function () {
+    //console.log(data);
+    var current = parseInt(document.getElementById('countDiv').innerHTML,10);
+    document.getElementById('countDiv').innerHTML = current+1;
+    //socket.emit('my other event', { my: 'data' });
+}); 

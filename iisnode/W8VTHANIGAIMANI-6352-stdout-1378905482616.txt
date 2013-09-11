@@ -1,0 +1,12 @@
+info: socket.io started
+Express server listening on port \\.\pipe\82ebcd9d-9062-406b-9faa-c980d3d14b54
+debug: setting request GET /socket.io/1/xhr-polling/A6KDtUs5CWAfKyaZKebF?t=1378905395262
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing 7:::1+0
+debug: set close timeout for client A6KDtUs5CWAfKyaZKebF
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: cleared close timeout for client A6KDtUs5CWAfKyaZKebF
+debug: discarding transport
+[90mGET / [31m500 [90m87ms[0m

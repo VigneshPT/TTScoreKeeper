@@ -1,0 +1,11 @@
+SyntaxError: Unexpected identifier
+    at Object.Function (<anonymous>)
+    at Object.exports.compile (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\jade\lib\jade.js:176:8)
+    at Object.exports.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\jade\lib\jade.js:215:17)
+    at View.exports.renderFile [as engine] (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\jade\lib\jade.js:243:13)
+    at View.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\view.js:75:8)
+    at Function.app.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\response.js:753:7)
+    at exports.index (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\routes\index.js:7:7)
+    at callbacks (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\router\index.js:161:37)
+    at param (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\express\lib\router\index.js:135:11)

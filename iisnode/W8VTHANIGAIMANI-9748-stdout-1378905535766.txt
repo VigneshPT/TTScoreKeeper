@@ -1,0 +1,263 @@
+info: socket.io started
+Express server listening on port \\.\pipe\7880917a-0c07-4f8d-b5b7-3e98ba83bc23
+[90mGET / [32m200 [90m88ms - 422[0m
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/websocket/gnuXx5djWDG63uqtLLYv
+debug: set heartbeat interval for client gnuXx5djWDG63uqtLLYv
+debug: client authorized for 
+debug: websocket writing 1::
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+info: socket error Error: write EPIPE
+    at errnoException (net.js:901:11)
+    at Socket._write (net.js:643:26)
+    at doWrite (_stream_writable.js:219:10)
+    at writeOrBuffer (_stream_writable.js:209:5)
+    at Socket.Writable.write (_stream_writable.js:180:11)
+    at Socket.write (net.js:613:40)
+    at WebSocket.write (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\transports\websocket\hybi-16.js:190:19)
+    at WebSocket.Transport.onDispatch (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\transport.js:222:10)
+    at Socket.dispatch (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\socket.js:230:38)
+    at Socket.packet (C:\Users\vthanigaimani\Documents\My Web Sites\TTScoreKeeper\node_modules\socket.io\lib\socket.js:214:10)
+debug: websocket writing 5:::{"name":"connected"}
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905547248
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing �26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}�26�5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: cleared heartbeat interval for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905547283
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905547363
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905548350
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905549374
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905550521
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905551561
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905552587
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905553613
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905554651
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905555728
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: xhr-polling writing 5:::{"name":"updateCount"}
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/xhr-polling/gnuXx5djWDG63uqtLLYv?t=1378905556715
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905557252&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: clearing poll timeout
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905557748&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905558768&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905559806&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905560830&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905561857&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905562897&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905563932&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905564968&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905566006&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905567036&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905568072&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905569096&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905570136&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905571159&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905572197&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905573229&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905574260&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905575292&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905576328&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905577361&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905578395&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("5:::{\"name\":\"updateCount\"}");
+debug: set close timeout for client gnuXx5djWDG63uqtLLYv
+debug: setting request GET /socket.io/1/jsonp-polling/gnuXx5djWDG63uqtLLYv?t=1378905579427&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client gnuXx5djWDG63uqtLLYv
