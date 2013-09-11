@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div.count(id="countDiv") 0
+  input(type="button", id="stopBtn" onclick='stopUpdating();') Stop

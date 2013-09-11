@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"W8VTHANIGAIMANI-10120-stderr-1378902638103.txt","computername":"W8VTHANIGAIMANI","pid":10120,"type":"stderr","created":1378902638103},{"file":"W8VTHANIGAIMANI-10120-stdout-1378902638102.txt","computername":"W8VTHANIGAIMANI","pid":10120,"type":"stdout","created":1378902638102},{"file":"W8VTHANIGAIMANI-10912-stdout-1378902081298.txt","computername":"W8VTHANIGAIMANI","pid":10912,"type":"stdout","created":1378902081298},{"file":"W8VTHANIGAIMANI-11468-stdout-1378902377979.txt","computername":"W8VTHANIGAIMANI","pid":11468,"type":"stdout","created":1378902377979},{"file":"W8VTHANIGAIMANI-12428-stdout-1378901852312.txt","computername":"W8VTHANIGAIMANI","pid":12428,"type":"stdout","created":1378901852312},{"file":"W8VTHANIGAIMANI-1720-stdout-1378902787543.txt","computername":"W8VTHANIGAIMANI","pid":1720,"type":"stdout","created":1378902787543},{"file":"W8VTHANIGAIMANI-3272-stdout-1378902679106.txt","computername":"W8VTHANIGAIMANI","pid":3272,"type":"stdout","created":1378902679106},{"file":"W8VTHANIGAIMANI-5776-stdout-1378902654634.txt","computername":"W8VTHANIGAIMANI","pid":5776,"type":"stdout","created":1378902654634},{"file":"W8VTHANIGAIMANI-8512-stdout-1378902621695.txt","computername":"W8VTHANIGAIMANI","pid":8512,"type":"stdout","created":1378902621695},{"file":"W8VTHANIGAIMANI-9144-stdout-1378902391047.txt","computername":"W8VTHANIGAIMANI","pid":9144,"type":"stdout","created":1378902391047}];
+        var lastUpdated = 1378902787810;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
