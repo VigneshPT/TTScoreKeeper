@@ -65,12 +65,15 @@ app.post('/admin/updateUserPicture/:number', function (req, res) {
     var imageSource = decodeURI(req.body);
     console.log(imageSource.toString());
     playerProvider.updateProfilePic(playernumber, imageSource, function (error) {
+        console(error);
         res.send("successfully updated db with imagesource");
         if (isConnected) {
             if (playernumber == 1)
                 playerProvider.getPlayers(function (err, players) {
                     if (!err)
                         isConnected.broadcast.emit('updatePlayers', players);
+                    else
+                        console.log('error ' + err);
                 });
         }
     });

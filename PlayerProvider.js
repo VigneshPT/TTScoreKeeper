@@ -81,8 +81,13 @@ PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, cal
         if (error) callback(error);
         else {
 
-            players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false });
-            console.log("imageSource updated for player" + playerNo)
+            players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false }, function (error, result) {
+                if (!error)
+                    console.log("imageSource updated for player" + playerNo);
+                else
+                    console.log(error);
+            });
+
         }
     });
 };

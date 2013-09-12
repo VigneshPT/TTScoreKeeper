@@ -41,6 +41,7 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     });
 
     socket.on('updatePlayers', function (players) {
+        alert("invoked updatePlayers");
         $scope.player1 = players[0];
         $scope.player2 = players[1];
         $scope.$apply();
