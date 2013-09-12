@@ -1,12 +1,16 @@
 {
-  "name": "WebMatrixExpressSite",
+  "name": "TTScoreKeeper",
   "version": "0.2.0",
   "author": "The WebMatrix Team <webmatrix@microsoft.com>",
   "description": "A simple boilerplate for building node applications on Windows Azure (or wherever)",
   "contributors": [
     {
-      "name": "Justin Beckwith",
-      "email": "justbe@microsoft.com"
+      "name": "Vignesh PT",
+      "email": "vignesh294@gmail.com"
+    },
+    {
+       "name":"Shaul Hameed",
+       "email":"shaul21h@gmail.com"
     }
   ],
   "main": "./server.js",
@@ -18,7 +22,9 @@
   "dependencies": {
     "jade": "*",
     "express": "~3.1.0",
-    "socket.io":"*"
+    "socket.io":"*",
+    "ejs":"*",
+    "mongodb":"*"
   },
   "noAnalyze": true,
   "license": "Apache",

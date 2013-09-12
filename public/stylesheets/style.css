@@ -22,3 +22,6 @@ a {
     font-size: 40px;
     color: #fff;
 }
+
+.set-picture-button{float: right;
+margin-top: 15px;}

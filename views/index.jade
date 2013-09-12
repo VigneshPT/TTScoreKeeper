@@ -3,28 +3,31 @@ extends layout
 block content
     div.row-fluid
         div.container-fluid
-            h1 Welcome to Global English Table Tennis Tournament
+            h1.span12.pagination-centered
+                img.geLogo(src="/images/GE_logo.png")
+                span Table Tennis Tournament
     div.row-fluid(ng-app="tt")
         div.container-fluid(ng-controller='master')
             div.span12
                 div.well
                     h1 {{round}}
-                div.span6
-                    div.well
-                        h1 Player 1
-                        h2 {{player1.name}}
-                        div.span12
-                            div.span6
-                                img.img-polaroid(src='/images/men.jpg')
-                            div.span6
-                                h3 Points {{player1.points}}
-                div.span6
-                    div.well
-                        h1 Player 2
-                        h2 {{player2.name}}
-                        div.span12
-                            div.span6
-                                img.img-polaroid(src='/images/men.jpg')
-                            div.span6
-                                h3 Points {{player2.points}}
+                div.row
+                    div.span6
+                        div.well
+                            h1 Player 1
+                            h2 {{player1.name}}
+                            div.span12
+                                div.span6
+                                    img.img-polaroid(src='{{player1.profileImage}}')
+                                div.span6
+                                    h3 Points {{player1.points}}
+                    div.span6
+                        div.well
+                            h1 Player 2
+                            h2 {{player2.name}}
+                            div.span12
+                                div.span6
+                                    img.img-polaroid(src='{{player2.profileImage}}')
+                                div.span6
+                                    h3 Points {{player2.points}}
   
