@@ -63,7 +63,7 @@ app.post('/admin/updateUserPicture/:number', function (req, res) {
     var playernumber = req.params.number;
     console.log(playernumber);
     var imageSource = decodeURI(req.body);
-    console.log(imageSource);
+    console.log(imageSource.toString());
     playerProvider.updateProfilePic(playernumber, imageSource, function (error) {
         res.send("successfully updated db with imagesource");
         if (isConnected) {

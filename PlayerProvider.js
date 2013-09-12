@@ -77,46 +77,28 @@ PlayerProvider.prototype.getSecondPlayer = function (callback) {
 
 PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, callback) {
     var getPlayer = null;
-    if (playerNo == 1)
-        getPlayer = this.getFirstPlayer;
-    else if (playerNo == 2)
-        getPlayer = this.getSecondPlayer;
-    getPlayer(function (error, player) {
+    this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-            this.getPlayerCollection(function (error, players) {
-                if (error) callback(error);
-                else {
 
-                    players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false });
-                    console.log("imageSource updated for player" + playerNo)
-                }
-            });
+            players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false });
+            console.log("imageSource updated for player" + playerNo)
         }
     });
 };
 
 PlayerProvider.prototype.updateScore = function (playerNo, score, callback) {
-    var getPlayer = null;
-    if (playerNo == 1)
-        getPlayer = this.getFirstPlayer;
-    else if (playerNo == 2)
-        getPlayer = this.getSecondPlayer;
-    getPlayer(function (error, player) {
+    
+    this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-            this.getPlayerCollection(function (error, players) {
-                if (error) callback(error);
-                else {
 
-                    players.update({ playerNumber: playerNo }, { $set: { points: score} }, { multi: false },function(err,result){
-                        if(err) {console.log("error updating image source"); callback(err);}
-                        else
-                            console.log("points updated for player" + playerNo)
-                    });
-                    
-                }
+            players.update({ playerNumber: playerNo }, { $set: { points: score} }, { multi: false },function(err,result){
+                if(err) {console.log("error updating image source"); callback(err);}
+                else
+                    console.log("points updated for player" + playerNo)
             });
+                    
         }
     });
 };
