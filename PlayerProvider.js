@@ -1,7 +1,7 @@
 var Db = require('mongodb').Db;
 var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
-var BSON = require('mongodb').BSON;
+var BSON = require('mongodb').BSONPure;
 var ObjectId = require('mongodb').ObjectID;
 
 /*
@@ -16,23 +16,37 @@ var ObjectId = require('mongodb').ObjectID;
 
 
 PlayerProvider = function (host, port) {
-    this.db = new Db('tt-score-keeping-db', new Server(host, port, { auto_reconnect: true }, {}));
+    this.db = new Db('tt-score-keeping-db', new Server(host, port, { auto_reconnect: true, safe: false }, {}));
     this.db.open(function (err, db) {
         if (!err) {
             console.log('connected to players tt-score-keeping db');
-            db.collection('players', {strict:true}, function (err, collection) {
-                if (err) {
+            db.collection('players', {/*strict:true*/
+            }, function (error, player_collection) {
+                /*if (error) {
+                    console.log("the players collection doesn't exist, creating default players");*/
+                player_collection.count(function (err, count) {
+                    if (error || count == 0) { 
+                        console.log("the players collection doesn't exist, creating default players");
+                        player_collection.insert(defaultPlayers, { safe: true }, function (err, result) {
+                            if (!err)
+                                console.log('inserted default players');
+                        });
+                    }
+                });
+                /*if (err) {
                     console.log("the players collection doesn't exist, creating default players");
-                    db.collection('players',function(err,collection){
+
+                    db.collection('players', function (err, collection) {
                         collection.insert(defaultPlayers, { safe: true }, function (err, result) {
-                        if(!err)
-                            console.log('inserted default players');
+                            if (!err)
+                                console.log('inserted default players');
+                        });
                     });
-                    });
-                }
+                }*/
             });
         }
     });
+    //this.db.lastError(function(){});
 };
 
 PlayerProvider.prototype.getPlayerCollection = function (callback) {
@@ -44,7 +58,7 @@ PlayerProvider.prototype.getPlayerCollection = function (callback) {
 
 PlayerProvider.prototype.getPlayers = function (callback) {
     this.getPlayerCollection(function (error, player_collection) {
-        player_collection.find().toArray(function (error, results) {
+        player_collection.find().sort({playerNumber:1}).toArray(function (error, results) {
             if (error) callback(error);
             else callback(null, results);
         });
@@ -76,18 +90,34 @@ PlayerProvider.prototype.getSecondPlayer = function (callback) {
 };
 
 PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, callback) {
-    var getPlayer = null;
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-
-            players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false }, function (error, result) {
-                if (!error)
-                    console.log("imageSource updated for player" + playerNo);
-                else
-                    console.log(error);
+            players.findOne({ playerNumber: parseInt(playerNo) }, function (findError, playerToUpdate) {
+                if (findError)
+                    console.log('find error');
+                else {
+                    console.log(playerToUpdate);
+                    players.update({ _id: new ObjectId(playerToUpdate._id.toString()) }, { $set: { profileImage: imageSource} }, { multi: false, safe: true }, function (updateError, result) {
+                        if (!updateError) {
+                            console.log("imageSource updated for player" + playerNo);
+                            console.log('affected ' + result + " docs");
+                            callback();
+                        }
+                        else
+                            console.log(updateError);
+                    });
+                }
             });
-
+            /*players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false, safe: false, upset: false }, function (error, result) {
+            if (!error) {
+            console.log("imageSource updated for player" + playerNo);
+            console.log('affected ' + result + " docs");
+            callback();
+            }
+            else
+            console.log(error);
+            });*/
         }
     });
 };

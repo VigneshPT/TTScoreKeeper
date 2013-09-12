@@ -41,7 +41,7 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     });
 
     socket.on('updatePlayers', function (players) {
-        alert("invoked updatePlayers");
+        alert("invoked updatePlayers" + players[0].profileImage);
         $scope.player1 = players[0];
         $scope.player2 = players[1];
         $scope.$apply();

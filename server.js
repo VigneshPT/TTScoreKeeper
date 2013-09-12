@@ -62,26 +62,34 @@ app.get('/getPlayers', function (req, res) {
 app.post('/admin/updateUserPicture/:number', function (req, res) {
     var playernumber = req.params.number;
     console.log(playernumber);
-    var imageSource = decodeURI(req.body);
-    console.log(imageSource.toString());
+    var imageSource = (req.body).src;
+    console.log(imageSource);
     playerProvider.updateProfilePic(playernumber, imageSource, function (error) {
-        console(error);
+        if (error) console(error);
         res.send("successfully updated db with imagesource");
+        //res.writeHead(200, { 'Content-Type': 'text/plain' });
+        //res.write("successfully updated db with imagesource");
+        //res.end();
         if (isConnected) {
             if (playernumber == 1)
-                playerProvider.getPlayers(function (err, players) {
-                    if (!err)
-                        isConnected.broadcast.emit('updatePlayers', players);
-                    else
-                        console.log('error ' + err);
-                });
+            playerProvider.getPlayers(function (err, players) {
+                if (!err)
+                    isConnected.emit('updatePlayers', players);
+                else
+                    console.log('error ' + err);
+            });
         }
     });
 });
 
 /*ajax calls from client -- end */
 
-app.get('/', routes.index);
+app.get('/', function(req,res){
+    playerProvider.getPlayers(function (err, _players) {
+        if(!err)
+            res.render('index', { title: 'Global English Table Tennis Tournament',players:_players })
+    });
+});//routes.index);
 app.get('/users', user.list);
 app.get('/1132', function (req, res) {
     playerProvider.getPlayers(function (err, _players) {
@@ -90,11 +98,11 @@ app.get('/1132', function (req, res) {
     });
     
 });
-app.post('/push', function(req, res){
-
+app.post('/push', function (req, res) {
+    console.log(req.body);
     isConnected.emit("updateCount", req.body.user.name);
     res.redirect('/1132');
-    
+
 });
 
 app.post('/pop', function(req, res){
