@@ -43,7 +43,16 @@ $(document).ready(function () {
         switch (this.id) {
             case "upbutton1":
                 {
-                    $('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1);
+                    //$('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1);
+                    $.ajax({
+                        url: "/push",
+                        type: "POST",
+                        processData: false,
+                        data: 'player=1&score=' + parseInt($('#player1Points').text(), 10),
+                        success: function (data) { console.log(data); $('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1); },
+                        error: function (err) { console.log(err); }
+                    });
+                    break;
                 }
             case "upbutton2":
                 {
@@ -51,24 +60,41 @@ $(document).ready(function () {
                         url: "/push",
                         type: "POST",
                         processData: false,
-                        data: 'user=' + this.id,
-                        success: function (data) { console.log(data); },
+                        data: 'player=2&score=' + parseInt($('#player2Points').text(), 10),
+                        success: function (data) { console.log(data); $('#player2Points').text(parseInt($('#player2Points').text(), 10) + 1); },
                         error: function (err) { console.log(err); }
                     });
 
                     break;
                 }
             case "downbutton1":
+                {
+                    var tempPoints = parseInt($('#player2Points').text(), 10);
+                    if (tempPoints > 0) {
+                        $.ajax({
+                            url: "/pop",
+                            type: "POST",
+                            processData: false,
+                            data: 'player=1&score=' + parseInt($('#player1Points').text(), 10),
+                            success: function (data) { console.log(data); $('#player1Points').text(tempPoints - 1); },
+                            error: function (err) { console.log(err); }
+                        });
+                    }
+                    break;
+                }
             case "downbutton2":
                 {
-                    $.ajax({
-                        url: "/pop",
-                        type: "POST",
-                        processData: false,
-                        data: 'user=' + this.id,
-                        success: function (data) { console.log(data); },
-                        error: function (err) { console.log(err); }
-                    });
+                    var tempPoints = parseInt($('#player2Points').text(), 10);
+                    if (tempPoints > 0) {
+                        $.ajax({
+                            url: "/pop",
+                            type: "POST",
+                            processData: false,
+                            data: 'player=2&score=' + parseInt($('#player2Points').text(), 10),
+                            success: function (data) { console.log(data); $('#player2Points').text(tempPoints - 1); },
+                            error: function (err) { console.log(err); }
+                        });
+                    }
                     break;
                 }
         }

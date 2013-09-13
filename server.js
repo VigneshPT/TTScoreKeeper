@@ -118,13 +118,32 @@ app.get('/resetPlayers/:advanceRound', function (req, res) {
 
 app.post('/push', function (req, res) {
     console.log(req.body);
-    isConnected.emit("updateCount", req.body.user);
+    playerProvider.updateScore(req.body.player, parseInt(req.body.score,10)+1, function (err, result) {
+        if (err) { console.log('could not update player to db: ' + err); }
+        else {
+            playerProvider.getPlayers(function (error, players) {
+                if (error) { console.log('could not get players [in push post]' + error); }
+                else {isConnected.emit("updateCount", players); res.send('success'); }
+            });
+        }
+    });
+    //isConnected.emit("updateCount", req.body);
     //res.redirect('/1132');
 
 });
 
 app.post('/pop', function(req, res){
-    isConnected.emit("negateCount", req.body.user);
+    playerProvider.updateScore(req.body.player, parseInt(req.body.score,10)-1, function (err, result) {
+        if (err) { console.log('could not update player to db: ' + err); }
+        else {
+            playerProvider.getPlayers(function (error, players) {
+                if (error) { console.log('could not get players [in pop post]' + error); }
+                else {isConnected.emit("negateCount", players); res.send('success'); }
+            });
+        }
+    });
+
+    //isConnected.emit("negateCount", req.body.user);
     // res.redirect('/1132');
 });
 

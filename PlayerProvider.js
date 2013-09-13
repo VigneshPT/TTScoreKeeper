@@ -22,10 +22,11 @@ PlayerProvider = function (host, port) {
             db.collection('players', {/*strict:true*/
             }, function (error, player_collection) {
                 /*if (error) {
-                    console.log("the players collection doesn't exist, creating default players");*/
+                console.log("the players collection doesn't exist, creating default players");*/
                 player_collection.count(function (err, count) {
-                    if (error || count == 0) { 
+                    if (error || count < 2) {
                         console.log("the players collection doesn't exist, creating default players");
+                        player_collection.drop();
                         player_collection.insert(defaultPlayers, { safe: true }, function (err, result) {
                             if (!err)
                                 console.log('inserted default players');
@@ -33,14 +34,14 @@ PlayerProvider = function (host, port) {
                     }
                 });
                 /*if (err) {
-                    console.log("the players collection doesn't exist, creating default players");
+                console.log("the players collection doesn't exist, creating default players");
 
-                    db.collection('players', function (err, collection) {
-                        collection.insert(defaultPlayers, { safe: true }, function (err, result) {
-                            if (!err)
-                                console.log('inserted default players');
-                        });
-                    });
+                db.collection('players', function (err, collection) {
+                collection.insert(defaultPlayers, { safe: true }, function (err, result) {
+                if (!err)
+                console.log('inserted default players');
+                });
+                });
                 }*/
             });
         }
