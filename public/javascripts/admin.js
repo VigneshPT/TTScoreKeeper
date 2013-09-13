@@ -19,10 +19,10 @@ $(document).ready(function () {
         else if (this.id == 'player2SetPicture') {
             $.ajax({
                 url: "http://" + location.host + '/admin/updateUserPicture/2',
-                type: "PUT",
+                type: "POST",
                 processData: false,
-                data: encodeURI(imageSource),
-                success: function () { console.log("Updated"); },
+                data: 'src='+encodeURIComponent(imageSource),
+                success: function (data) { console.log(data); },
                 error: function () { console.log('error'); }
 
             });

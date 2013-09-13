@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    script.
+        var players = !{JSON.stringify(players)};
     div.row-fluid
         div.container-fluid
             h1.span12.pagination-centered

@@ -3,9 +3,8 @@ var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
 var BSON = require('mongodb').BSONPure;
 var ObjectId = require('mongodb').ObjectID;
-
 /*
-    {
+    { 
         _id:ObjectID,
         playerNumber: 1 or 2,
         name: "Ramkumar",
@@ -123,28 +122,32 @@ PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, cal
 };
 
 PlayerProvider.prototype.updateScore = function (playerNo, score, callback) {
-    
+
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-
-            players.update({ playerNumber: playerNo }, { $set: { points: score} }, { multi: false },function(err,result){
-                if(err) {console.log("error updating image source"); callback(err);}
-                else
-                    console.log("points updated for player" + playerNo)
+            players.update({ playerNumber: parseInt(playerNo) }, { $set: { points: score} }, { multi: false, safe: true }, function (err, result) {
+                if (err) { console.log("error updating image source"); callback(err); }
+                else {
+                    console.log("points updated for player" + playerNo);
+                    callback(null, result);
+                }
             });
-                    
+
         }
     });
 };
 
-PlayerProvider.prototype.updatePlayer = function(player,callback){
-    this.getPlayerCollection(function(error,players){
-        if(error)   callback(error);
-        else{
-            players.update({playerNumber:player.playerNumber},player,{multi:false},function(err,result){
-               if(err){console.log("error updating player"); callback(err);}
-               else console.log("player "+player.playerNumber+" updated"); 
+PlayerProvider.prototype.updatePlayer = function (player, callback) {
+    this.getPlayerCollection(function (error, players) {
+        if (error) callback(error);
+        else {
+            players.update({ playerNumber: player.playerNumber }, player, { multi: false }, function (err, result) {
+                if (err) { console.log("error updating player"); callback(err); }
+                else {
+                    console.log("player " + player.playerNumber + " updated");
+                    callback(null, result);
+                }
             });
         }
     });
@@ -170,9 +173,10 @@ PlayerProvider.prototype.resetPlayers = function (callback) {
         for (var i = 0; i < defaultPlayers.length; i++) {
             players.drop();
             players.save(defaultPlayers[i], { safe: true }, function (err, result) {
-                if (err) { console.log("couldn't reset player"); callback(error); }
+                if (err) { console.log("couldn't reset player"); callback(err); }
                 else {
                     console.log("resetted player " + defaultPlayers[i].playerNumber);
+                    callback(null,result)
                 }
             });
         }

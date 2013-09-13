@@ -1,7 +1,7 @@
 var app = angular.module("tt", []);
 app.controller('master', ["$scope", "$http", function ($scope, $http) {
-    $scope.player1 = { name: "Narayanan", points: 0, profileImage: "/images/men.jpg" };
-    $scope.player2 = { name: "Rajkumar", points: 0, profileImage: "/images/men.jpg" };
+    $scope.player1 = players[0] || { name: "Narayanan", points: 0, profileImage: "/images/men.jpg" };
+    $scope.player2 = players[1] || { name: "Rajkumar", points: 0, profileImage: "/images/men.jpg" };
     $scope.round = "Round 1";
     var socket = io.connect("http://" + location.host);
     socket.on('updateCount', function (e) {
