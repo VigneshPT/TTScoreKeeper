@@ -42,6 +42,9 @@ $(document).ready(function () {
     $('.updateScoreButton').click(function () {
         switch (this.id) {
             case "upbutton1":
+                {
+                    $('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1);
+                }
             case "upbutton2":
                 {
                     $.ajax({
@@ -52,6 +55,7 @@ $(document).ready(function () {
                         success: function (data) { console.log(data); },
                         error: function (err) { console.log(err); }
                     });
+
                     break;
                 }
             case "downbutton1":
