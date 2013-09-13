@@ -98,20 +98,58 @@ app.get('/1132', function (req, res) {
     
 });
 
-app.get('/resetPlayers/:advanceRound', function (req, res) {
-    playerProvider.resetPlayers(function (err, result) {
+app.get('/resetScores', function (req, res) {
+    playerProvider.resetScores(function (err, result) {
         if (err) { console.log(err); res.send(err); }
-        else { console.log('successfully resetted'); 
+        else { 
+            console.log('successfully resetted'); 
             var _advanceRound =req.params.advanceRound;
             if (isConnected) {
                 playerProvider.getPlayers(function (err, _players) {
                     if (!err)
-                        isConnected.emit('updatePlayers', {players:_players,advanceRound:_advanceRound});
+                        isConnected.emit('updatePlayers', {players:_players,advanceRound:1});
                     else
                         console.log('error ' + err);
                 });
             }
             res.send('success'); 
+        }
+    });
+});
+
+app.get('/resetAll', function (req, res) {
+    playerProvider.resetPlayers(function (err, result) {
+        if (err) { console.log(err); res.send(err); }
+        else { 
+            console.log('resetted everything to default'); 
+            if (isConnected) {
+                playerProvider.getPlayers(function (err, _players) {
+                    if (!err)
+                        isConnected.emit('updatePlayers', {players:_players,advanceRound:2}); // advanceRound:2 for resetting the Round
+                    else
+                        console.log('error ' + err);
+                });
+            }
+            res.send('success'); 
+        }
+    });
+});
+
+app.post('/updatePlayerName/:number', function (req, res) {
+    //console.log(req.body);
+    var pnumber = req.params.number;
+    playerProvider.updatePlayerName(pnumber, req.body.pname, function (err, result) {
+        if (err) { console.log('error updating player name: ' + err); res.send('error'); }
+        else {
+            res.send('success: updated player name');
+            if (isConnected) {
+                playerProvider.getPlayers(function (err, _players) {
+                    if (!err)
+                        isConnected.emit('updatePlayers', {players:_players,advanceRound:0});//players);
+                    else
+                        console.log('error ' + err);
+                });
+            }
         }
     });
 });

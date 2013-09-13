@@ -6,31 +6,28 @@ block content
    script(src="/javascripts/admin.js")
    div.container-fluid
         div.row
-            div.span6.btn.btn-large.next-round-button(id='nextroundbtn') Next Round
+            div.span3.btn.btn-large.next-round-button(id='nextroundbtn') Next Round
+            div.span3.btn.btn-large.next-round-button(id='resetallbtn') Reset All
         div.row
             div.span6.well
                 div.btn.btn-large.set-picture-button(id='player1SetPicture') Set Picture
-                h1 Player1
-                h2(id='player1Points')= players[0].points
+                div.player-name-label(id='player1namelabel')=players[0].name
+                button.btn.btn-small.edit-name-button(id='editpname1') Edit
+                div.player-points-label
+                    h2(id='player1Points')= players[0].points
 
-                    //form(method="post", action="/push")
-                    //input(name="user[name]", value="player1",style="display:none")
-                    //button.btn.btn-large.btn-block.btn-primary(type="submit") Up by one
+                    
                 button.btn.btn-large.btn-block.btn-primary.updateScoreButton(id="upbutton1") Up by one
-                //form(method="post", action="/pop")
-                //input(name="user[name]", value="player1",style="display:none")
-                //button.btn.btn-large.btn-block.btn-danger(type="submit", ng-bind='minux') Down by one
+                
                 button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton1",ng-bind='minux') Down by one
             div.span6.well
                 div.btn.btn-large.set-picture-button(id='player2SetPicture') Set Picture
-                h1 Player2
-                h2(id='player2Points')= players[1].points
-                    //form(method="post", action="/push")
-                    //input(name="user[name]", value="player2",style="display:none")
-                    //button.btn.btn-large.btn-block.btn-primary(type="submit") Up by one
+                div.player-name-label(id='player2namelabel')=players[1].name
+                button.btn.btn-small.edit-name-button(id='editpname2') Edit
+                div.player-points-label
+                    h2(id='player2Points')= players[1].points
+                    
                 button.btn.btn-large.btn-block.btn-primary.updateScoreButton(id="upbutton2") Up by one
-                //form(method="post", action="/pop")
-                //input(name="user[name]", value="player2",style="display:none")
-                //button.btn.btn-large.btn-block.btn-danger(type="submit", ng-bind='minux') Down by one
+                
                 button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton2", ng-bind='minux') Down by one
 

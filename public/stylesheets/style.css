@@ -23,9 +23,11 @@ a {
     color: #fff;
 }
 
-.set-picture-button{float: right;
-margin-top: 15px;}
+.set-picture-button{float: right;}
 
 .player-points{font-size: 197px;line-height: 149px;}
 
 .next-round-button{margin-bottom: 10px;}
+.player-name-label {font-size: xx-large; font-weight: bold;float: left;}
+.edit-name-button{margin-left: 20px;float: left;margin-top: 5px;}
+.player-points-label{clear: left;float: none;}

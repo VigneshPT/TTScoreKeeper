@@ -1,7 +1,7 @@
 var app = angular.module("tt", []);
 app.controller('master', ["$scope", "$http", function ($scope, $http) {
-    $scope.player1 = players[0] || { name: "Narayanan", points: 0, profileImage: "/images/men.jpg" };
-    $scope.player2 = players[1] || { name: "Rajkumar", points: 0, profileImage: "/images/men.jpg" };
+    $scope.player1 = players[0] || { name: "Home", points: 0, profileImage: "/images/men.jpg" };
+    $scope.player2 = players[1] || { name: "Away", points: 0, profileImage: "/images/men.jpg" };
     $scope.round = 1;
     var socket = io.connect("http://" + location.host);
     socket.on('updateCount', function (e) {
@@ -26,16 +26,16 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
         /*if (e === "downbutton1") {
-            if ($scope.player1.points !== 0)
-                $scope.player1.points--;
-            else
-                $scope.player1.points = 0;
+        if ($scope.player1.points !== 0)
+        $scope.player1.points--;
+        else
+        $scope.player1.points = 0;
         }
         else if (e === "downbutton2") {
-            if ($scope.player2.points !== 0)
-                $scope.player2.points--;
-            else
-                $scope.player2.points = 0;
+        if ($scope.player2.points !== 0)
+        $scope.player2.points--;
+        else
+        $scope.player2.points = 0;
         }*/
         $scope.$apply();
     });
@@ -50,7 +50,9 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
         $scope.player1 = data.players[0];
         $scope.player2 = data.players[1];
         if (data.advanceRound == 1)
-            $scope.round = parseInt($scope.round, 10) + 1;
+            $scope.round = parseInt($scope.round, 10) + 1; //Advance to next round
+        else if (data.advanceRound == 2)
+            $scope.round = 1;
         $scope.$apply();
     });
 } ]);

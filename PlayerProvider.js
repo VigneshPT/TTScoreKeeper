@@ -139,6 +139,21 @@ PlayerProvider.prototype.updateScore = function (playerNo, score, callback) {
     });
 };
 
+PlayerProvider.prototype.updatePlayerName = function (playerNo, _name, callback) {
+    this.getPlayerCollection(function (error, players) {
+        if (error) callback(error);
+        else {
+            players.update({ playerNumber: parseInt(playerNo) }, { $set: { name: _name} }, { multi: false, safe: true }, function (err, result) {
+                if (err) { console.log("error updating player name: " + err); callback(err); }
+                else {
+                    console.log('player name updated for player' + playerNo);
+                    callback(null, result);
+                }
+            });
+        }
+    });
+};
+
 PlayerProvider.prototype.updatePlayer = function (player, callback) {
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
@@ -157,17 +172,18 @@ PlayerProvider.prototype.updatePlayer = function (player, callback) {
 var defaultPlayers = [
     {
         playerNumber: 1,
-        name: "",
+        name: "Home",
         profileImage: "/images/men.jpg",
         points: 0
     },
     {
         playerNumber: 2,
-        name: "",
+        name: "Away",
         profileImage: "/images/men.jpg",
         points: 0
     }
 ];
+
 
 PlayerProvider.prototype.resetPlayers = function (callback) {
     this.getPlayerCollection(function (error, players) {
@@ -186,5 +202,19 @@ PlayerProvider.prototype.resetPlayers = function (callback) {
 
 };
 
+PlayerProvider.prototype.resetScores = function (callback) {
+    this.getPlayerCollection(function (error, players) {
+        if (error) { console.log('[resetScores function] error to getCollection: ' + error); }
+        else {
+            players.update({}, { $set: { points: 0} }, { multi: true, safe: true }, function (err, result) {
+                if (err) { console.log('error resetting scores: ' + err); callback(err); }
+                else {
+                    console.log('resetted scores');
+                    callback(null, result);
+                }
+            });
+        }
+    });
+}
 
 exports.PlayerProvider = PlayerProvider;

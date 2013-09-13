@@ -31,9 +31,45 @@ $(document).ready(function () {
 
     $('#nextroundbtn').click(function () {
         $.ajax({
-            url: '/resetPlayers/1', //1 => to change to next round
+            url: '/resetScores',
             type: 'GET',
             processData: false,
+            success: function (successmessage) { console.log(successmessage); },
+            error: function (errormessage) { console.log(errormessage); }
+        });
+        $('#player1Points').text(0);
+        $('#player2Points').text(0);
+    });
+    $('#resetallbtn').click(function () {
+        $.ajax({
+            url: '/resetAll',
+            type: 'GET',
+            processData: false,
+            success: function (successmessage) { console.log(successmessage); },
+            error: function (errormessage) { console.log(errormessage); }
+        });
+        $('#player1Points').text(0);
+        $('#player2Points').text(0);
+        $('#player1namelabel').text("Home");
+        $('#player2namelabel').text("Away");
+    });
+
+    $('.edit-name-button').click(function () {
+        var name = prompt("Enter name: ");
+        var param = null;
+        if (this.id == 'editpname1') {
+            $('#player1namelabel').text(name);
+            param = 1;
+        }
+        else if (this.id == 'editpname2') {
+            $('#player2namelabel').text(name);
+            param = 2;
+        }
+        $.ajax({
+            url: '/updatePlayerName/' + param,
+            type: 'POST',
+            processData: false,
+            data: 'pname=' + name,
             success: function (successmessage) { console.log(successmessage); },
             error: function (errormessage) { console.log(errormessage); }
         });
