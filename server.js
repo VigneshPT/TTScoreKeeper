@@ -71,10 +71,9 @@ app.post('/admin/updateUserPicture/:number', function (req, res) {
         //res.write("successfully updated db with imagesource");
         //res.end();
         if (isConnected) {
-            if (playernumber == 1)
-            playerProvider.getPlayers(function (err, players) {
+            playerProvider.getPlayers(function (err, _players) {
                 if (!err)
-                    isConnected.emit('updatePlayers', players);
+                    isConnected.emit('updatePlayers', {players:_players,advanceRound:0});//players);
                 else
                     console.log('error ' + err);
             });
@@ -98,16 +97,35 @@ app.get('/1132', function (req, res) {
     });
     
 });
+
+app.get('/resetPlayers/:advanceRound', function (req, res) {
+    playerProvider.resetPlayers(function (err, result) {
+        if (err) { console.log(err); res.send(err); }
+        else { console.log('successfully resetted'); 
+            var _advanceRound =req.params.advanceRound;
+            if (isConnected) {
+                playerProvider.getPlayers(function (err, _players) {
+                    if (!err)
+                        isConnected.emit('updatePlayers', {players:_players,advanceRound:_advanceRound});
+                    else
+                        console.log('error ' + err);
+                });
+            }
+            res.send('success'); 
+        }
+    });
+});
+
 app.post('/push', function (req, res) {
     console.log(req.body);
-    isConnected.emit("updateCount", req.body.user.name);
-    res.redirect('/1132');
+    isConnected.emit("updateCount", req.body.user);
+    //res.redirect('/1132');
 
 });
 
 app.post('/pop', function(req, res){
-    isConnected.emit("negateCount", req.body.user.name);
-     res.redirect('/1132');
+    isConnected.emit("negateCount", req.body.user);
+    // res.redirect('/1132');
 });
 
 

@@ -165,18 +165,19 @@ var defaultPlayers = [
         name: "",
         profileImage: "/images/men.jpg",
         points: 0
-    }];
+    }
+];
 
 PlayerProvider.prototype.resetPlayers = function (callback) {
-
     this.getPlayerCollection(function (error, players) {
-        for (var i = 0; i < defaultPlayers.length; i++) {
+        if (error) console.log(error);
+        else {
             players.drop();
-            players.save(defaultPlayers[i], { safe: true }, function (err, result) {
+            players.insert(defaultPlayers, { safe: true,multi:true }, function (err, result) {
                 if (err) { console.log("couldn't reset player"); callback(err); }
                 else {
-                    console.log("resetted player " + defaultPlayers[i].playerNumber);
-                    callback(null,result)
+                    console.log("resetted players ");
+                    callback(null, result)
                 }
             });
         }

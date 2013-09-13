@@ -12,7 +12,7 @@ block content
         div.container-fluid(ng-controller='master')
             div.span12
                 div.well
-                    h1 {{round}}
+                    h1 Round {{round}}
                 div.row
                     div.span6
                         div.well
@@ -22,7 +22,8 @@ block content
                                 div.span6
                                     img.img-polaroid(src='{{player1.profileImage}}')
                                 div.span6
-                                    h3 Points {{player1.points}}
+                                    h3 Points
+                                        div.player-points {{player1.points}}
                     div.span6
                         div.well
                             h1 Player 2
@@ -31,5 +32,6 @@ block content
                                 div.span6
                                     img.img-polaroid(src='{{player2.profileImage}}')
                                 div.span6
-                                    h3 Points {{player2.points}}
+                                    h3 Points 
+                                        div.player-points {{player2.points}}
   
