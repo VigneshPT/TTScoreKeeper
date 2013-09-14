@@ -5,7 +5,7 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     $scope.round = 1;
     var socket = io.connect("http://" + location.host);
     socket.on('updateCount', function (e) {
-        alert(e);
+        //alert(e);
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
         /*if (e === "upbutton1") {
@@ -46,7 +46,7 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     });
 
     socket.on('updatePlayers', function (data) {
-        alert("invoked updatePlayers" + JSON.stringify(data));
+        //alert("invoked updatePlayers" + JSON.stringify(data));
         $scope.player1 = data.players[0];
         $scope.player2 = data.players[1];
         if (data.advanceRound == 1)
