@@ -13,9 +13,9 @@ block content
             div.span12
                 div.well
                     h1 Round {{round}}
-                div.row
+                div.row-fluid
                     div.span6
-                        div.well
+                        div.well(style="height:500px")
                             //h1 Player 1
                             h2 {{player1.name}}
                             div.span12
@@ -25,7 +25,7 @@ block content
                                     h3 Points
                                         div.player-points {{player1.points}}
                     div.span6
-                        div.well
+                        div.well(style="height:500px")
                             //h1 Player 2
                             h2 {{player2.name}}
                             div.span12
