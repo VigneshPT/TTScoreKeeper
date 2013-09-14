@@ -105,7 +105,7 @@ $(document).ready(function () {
                 }
             case "downbutton1":
                 {
-                    var tempPoints = parseInt($('#player2Points').text(), 10);
+                    var tempPoints = parseInt($('#player1Points').text(), 10);
                     if (tempPoints > 0) {
                         $.ajax({
                             url: "/pop",

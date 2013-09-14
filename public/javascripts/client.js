@@ -5,6 +5,10 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     $scope.round = 1;
     var socket = io.connect("http://" + location.host);
     socket.on('updateCount', function (e) {
+<<<<<<< HEAD
+=======
+        //alert(e);
+>>>>>>> 4b66c0d1b14996383754548186a332159c0433b9
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
         $scope.$apply();
@@ -21,6 +25,10 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     });
 
     socket.on('updatePlayers', function (data) {
+<<<<<<< HEAD
+=======
+        //alert("invoked updatePlayers" + JSON.stringify(data));
+>>>>>>> 4b66c0d1b14996383754548186a332159c0433b9
         $scope.player1 = data.players[0];
         $scope.player2 = data.players[1];
         if (data.advanceRound == 1){
