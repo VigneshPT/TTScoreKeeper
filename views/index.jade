@@ -12,26 +12,24 @@ block content
         div.container-fluid(ng-controller='master')
             div.span12
                 div.well
-                    h1 Round {{round}}
+                    h1(ng-bind-template='Round {{round}}') 
                 div.row-fluid
                     div.span6
                         div.well(style="height:500px")
-                            //h1 Player 1
-                            h2 {{player1.name}}
+                            h2(ng-bind='player1.name')
                             div.span12
                                 div.span6
-                                    img.img-polaroid(src='{{player1.profileImage}}')
+                                    img.img-polaroid(ng-src='{{player1.profileImage}}')
                                 div.span6
                                     h3 Points
-                                        div.player-points {{player1.points}}
+                                        div.player-points(ng-bind='player1.points')
                     div.span6
                         div.well(style="height:500px")
-                            //h1 Player 2
-                            h2 {{player2.name}}
+                            h2(ng-bind='player2.name')
                             div.span12
                                 div.span6
-                                    img.img-polaroid(src='{{player2.profileImage}}')
+                                    img.img-polaroid(ng-src='{{player2.profileImage}}')
                                 div.span6
                                     h3 Points 
-                                        div.player-points {{player2.points}}
+                                        div.player-points(ng-bind='player2.points')
   
