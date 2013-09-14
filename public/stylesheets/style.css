@@ -1,3 +1,8 @@
+@font-face{
+    font-family: ScoreBoard;
+    src: url(/font/scoreboard.ttf) format('truetype');
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -25,7 +30,7 @@ a {
 
 .set-picture-button{float: right;}
 
-.player-points{font-size: 197px;line-height: 149px;}
+.player-points{font-family:ScoreBoard;font-size: 197px;line-height: 149px;}
 
 .next-round-button{margin-bottom: 10px;}
 .player-name-label {font-size: xx-large; font-weight: bold;float: left;}

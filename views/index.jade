@@ -3,35 +3,35 @@ extends layout
 block content
     script.
         var players = !{JSON.stringify(players)};
-    div.row-fluid
-        div.container-fluid
-            h1.span12.pagination-centered
+    div.row
+        div.container
+            h1.col-md-12.text-center
                 img.geLogo(src="/images/GE_logo.png")
                 span Table Tennis Tournament
-    div.row-fluid(ng-app="tt")
-        div.container-fluid(ng-controller='master')
-            div.span12
+    div.row(ng-app="tt")
+        div.container(ng-controller='master')
+            div.col-md-12
                 div.well
-                    h1 Round {{round}}
+                    h1.text-center Round {{round}}
                 div.row
-                    div.span6
+                    div.col-md-6
                         div.well
                             //h1 Player 1
                             h2 {{player1.name}}
-                            div.span12
-                                div.span6
-                                    img.img-polaroid(src='{{player1.profileImage}}')
-                                div.span6
+                            div.col-md-12
+                                div.col-md-6
+                                    img.img-polaroid.img-thumbnail(src='{{player1.profileImage}}')
+                                div.col-md-6
                                     h3 Points
                                         div.player-points {{player1.points}}
-                    div.span6
+                    div.col-md-6
                         div.well
                             //h1 Player 2
                             h2 {{player2.name}}
-                            div.span12
-                                div.span6
-                                    img.img-polaroid(src='{{player2.profileImage}}')
-                                div.span6
+                            div.col-md-12
+                                div.col-md-6
+                                    img.img-polaroid.img-thumbnail(src='{{player2.profileImage}}')
+                                div.col-md-6
                                     h3 Points 
                                         div.player-points {{player2.points}}
   
