@@ -15,11 +15,8 @@ block content
                 button.btn.btn-small.edit-name-button(id='editpname1') Edit
                 div.player-points-label
                     h2(id='player1Points')= players[0].points
-
-                    
-                button.btn.btn-large.btn-block.btn-primary.updateScoreButton(id="upbutton1") Up by one
-                
-                button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton1",ng-bind='minux') Down by one
+                button.btn.btn-large.btn-block.btn-primary.updateScoreButton(id="upbutton1") Up by one              
+                button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton1") Down by one
             div.span6.well
                 div.btn.btn-large.set-picture-button(id='player2SetPicture') Set Picture
                 div.player-name-label(id='player2namelabel')=players[1].name
@@ -29,5 +26,5 @@ block content
                     
                 button.btn.btn-large.btn-block.btn-primary.updateScoreButton(id="upbutton2") Up by one
                 
-                button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton2", ng-bind='minux') Down by one
+                button.btn.btn-large.btn-block.btn-danger.updateScoreButton(id="downbutton2") Down by one
 
