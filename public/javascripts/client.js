@@ -2,10 +2,21 @@ var app = angular.module("tt", []);
 app.controller('master', ["$scope", "$http", function ($scope, $http) {
     $scope.player1 = players[0] || { name: "Home", points: 0, profileImage: "/images/men.jpg" };
     $scope.player2 = players[1] || { name: "Away", points: 0, profileImage: "/images/men.jpg" };
+    
+    $scope.$watch("player1", function(newValue, oldValue){
+        if(newValue.profileImage === "default"){
+            $scope.player1.profileImage ="/images/men.jpg"
+        }
+    });
+    $scope.$watch("player2", function(newValue, oldValue){
+        if(newValue.profileImage === "default"){
+            $scope.player2.profileImage ="/images/men.jpg"
+        }
+    });
+    
     $scope.round = 1;
     var socket = io.connect("http://" + location.host);
     socket.on('updateCount', function (e) {
-
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
         $scope.$apply();
