@@ -58,10 +58,16 @@ $(document).ready(function () {
         var name = prompt("Enter name: ");
         var param = null;
         if (this.id == 'editpname1') {
+            if(typeof name === "undefined" || name === "null" || name===""){
+                name = "Home";
+            }
             $('#player1namelabel').text(name);
             param = 1;
         }
         else if (this.id == 'editpname2') {
+            if(typeof name === "undefined" || name === "null"){
+                name = "Away";
+            }
             $('#player2namelabel').text(name);
             param = 2;
         }
