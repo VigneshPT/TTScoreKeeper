@@ -1,9 +1,9 @@
-
-//var fname = prompt("Enter Facebook profile id (example: vigneshpt)", "");
 $(document).ready(function () {
     $(".set-picture-button").click(function () {
         var profileId = prompt("Enter Facebook profile id (example: vigneshpt)", "");
-        var imageSource = "http://graph.facebook.com/" + profileId + "/picture?width=300&height=300";
+        var imageSource = "";
+        if(profileId !== "" || profileId === "null")
+            imageSource = "http://graph.facebook.com/" + profileId + "/picture?width=300&height=300";
         //var dataToSend = { "src": encodeURI(imageSource) };
         if (this.id == 'player1SetPicture') {
             $.ajax({
@@ -58,10 +58,16 @@ $(document).ready(function () {
         var name = prompt("Enter name: ");
         var param = null;
         if (this.id == 'editpname1') {
+            if(typeof name === "undefined" || name === "null" || name===""){
+                name = "Home";
+            }
             $('#player1namelabel').text(name);
             param = 1;
         }
         else if (this.id == 'editpname2') {
+            if(typeof name === "undefined" || name === "null"){
+                name = "Away";
+            }
             $('#player2namelabel').text(name);
             param = 2;
         }

@@ -61,15 +61,13 @@ app.get('/getPlayers', function (req, res) {
 
 app.post('/admin/updateUserPicture/:number', function (req, res) {
     var playernumber = req.params.number;
-    console.log(playernumber);
     var imageSource = (req.body).src;
     console.log(imageSource);
+    if(imageSource === "")
+        imageSource = "default";
     playerProvider.updateProfilePic(playernumber, imageSource, function (error) {
         if (error) console(error);
         res.send("successfully updated db with imagesource");
-        //res.writeHead(200, { 'Content-Type': 'text/plain' });
-        //res.write("successfully updated db with imagesource");
-        //res.end();
         if (isConnected) {
             playerProvider.getPlayers(function (err, _players) {
                 if (!err)
