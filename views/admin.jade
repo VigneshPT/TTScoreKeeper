@@ -4,30 +4,68 @@ extends layout
 block content
    script(src="/javascripts/jquery.min.js")
    script(src="/javascripts/admin.js")
-   div.container
+   div.container.admin-page-wrap
         div.row.text-center
-            button.col-md-6.btn-lg.next-round-button(id='nextroundbtn') Next Round
-            button.col-md-6.btn-lg.next-round-button(id='resetallbtn') Reset All
+            button.col-md-6.btn-lg.next-round-button(id='nextroundbtn')
+                div
+                    span.glyphicon.glyphicon-step-forward
+                    span Next Round
+            button.col-md-6.btn-lg.next-round-button(id='resetallbtn') 
+                div
+                    span.glyphicon.glyphicon-refresh 
+                    span Reset All
         div.row
             div.col-md-6.col-xs-6.well
-                div.btn-lg.set-picture-button(id='player1SetPicture') Set Picture
-                div.player-name-label(id='player1namelabel')=players[0].name
-                button.btn.btn-default.glyphicon.glyphicon-pencil.edit-name-button(id='editpname1')
-                div.player-points-label
-                    h2(id='player1Points')= players[0].points
+                div.point-wrapper
+                    h1.player-points-label.text-center
+                        div.label.label-info.page-header(id='player1Points')= players[0].points
 
-                    
-                button.btn-lg.btn-block.btn-primary.glyphicon.glyphicon-arrow-up.updateScoreButton(id="upbutton1")
+                div.points-buttons-group    
+                    button.btn-lg.btn-block.btn-primary.glyphicon.glyphicon-arrow-up.updateScoreButton.increase(id="upbutton1")
+                    button.btn-lg.btn-block.btn-danger.glyphicon.glyphicon-arrow-down.updateScoreButton(id="downbutton1")
+
+                div.row.player-wrap
+                    div.player-name-label(id='player1namelabel')=players[0].name
+                    div.btn-group.btn-group-vertical.button-group
+                        div.btn.btn-default.edit-name-button(id='editpname1')
+                            span.glyphicon.glyphicon-pencil
+                            span.visible-lg.visible-md.edit-button-text Edit Name
+                        div.btn.btn-default.set-picture-button(id='player1SetPicture')
+                            span.glyphicon.glyphicon-picture
+                            span.visible-lg.visible-md.set-picture-button-text Set Pic
+                        div.btn.btn-success.win-button(id='player1WinButton')
+                            span.glyphicon.glyphicon-certificate
+                            span.visible-lg.visible-md.win-player-text Win
+                        
+                        
                 
-                button.btn-lg.btn-block.btn-danger.glyphicon.glyphicon-arrow-down.updateScoreButton(id="downbutton1")
+                
+                    
             div.col-md-6.col-xs-6.well
-                div.btn-lg.set-picture-button(id='player2SetPicture') Set Picture
-                div.player-name-label(id='player2namelabel')=players[1].name
-                button.btn.btn-default.glyphicon.glyphicon-pencil.edit-name-button(id='editpname2')
-                div.player-points-label
-                    h2(id='player2Points')= players[1].points
-                    
-                button.btn-lg.btn-block.btn-primary.glyphicon.glyphicon-arrow-up.updateScoreButton(id="upbutton2")
+                div.point-wrapper
+                    h1.player-points-label.text-center
+                        div.label.label-info.page-header(id='player2Points')= players[1].points
                 
-                button.btn-lg.btn-block.btn-danger.glyphicon.glyphicon-arrow-down.updateScoreButton(id="downbutton2")
+                div.points-buttons-group     
+                    button.btn-lg.btn-block.btn-primary.glyphicon.glyphicon-arrow-up.updateScoreButton.increase(id="upbutton2")
+                
+                    button.btn-lg.btn-block.btn-danger.glyphicon.glyphicon-arrow-down.updateScoreButton(id="downbutton2")
+                
+                
+                div.row.player-wrap
+                    div.player-name-label(id='player2namelabel')=players[1].name
+                    div.btn-group.btn-group-vertical.button-group
+                        div.btn.btn-default.edit-name-button(id='editpname2')
+                            span.glyphicon.glyphicon-pencil
+                            span.visible-lg.visible-md.edit-button-text Edit Name
+                        div.btn.btn-default.set-picture-button(id='player2SetPicture')
+                            span.glyphicon.glyphicon-picture
+                            span.visible-lg.visible-md.set-picture-button-text Set Pic
+                        div.btn.btn-success.win-button(id='player2WinButton')
+                            span.glyphicon.glyphicon-certificate
+                            span.visible-lg.visible-md.win-player-text Win
+                
+                
+                
+                
 

@@ -9,7 +9,6 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , fs = require('fs')
-  , ejs = require('ejs')
   ,PlayerProvider = require('./PlayerProvider').PlayerProvider;
 
 var app = express();
@@ -32,16 +31,8 @@ app.configure('development', function(){
 });
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
-
-//render client.js with correct port no.
-var clientjsPath = __dirname + "/public/javascripts/client.js";
-fs.readFile(clientjsPath, 'utf-8', function (err, completeJsFile) {
-    if (err)
-        console.log('file reading error');
-    console.log(completeJsFile);
-    var renderedJs = ejs.render(completeJsFile, { portNo: app.get('port') });
-    console.log('rendered port number to client: ' + app.get('port'));
-});
+io.set('log level', 2);
+io.set('transports', [ 'websocket', 'xhr-polling' ]);
 
 //connecting to db
 var playerProvider = new PlayerProvider('localhost', 27017);
@@ -84,7 +75,7 @@ app.post('/admin/updateUserPicture/:number', function (req, res) {
 app.get('/', function(req,res){
     playerProvider.getPlayers(function (err, _players) {
         if(!err)
-            res.render('index', { title: 'Global English Table Tennis Tournament',players:_players })
+            res.render('index', { title: 'Global English Table Tennis Tournament',players:_players }) //check with index2
     });
 });//routes.index);
 app.get('/users', user.list);
@@ -189,7 +180,11 @@ app.post('/pop', function(req, res){
 io.sockets.on('connection', function (socket) {
     isConnected = socket;
     isConnected.emit('connected');
-//    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
-//    socket.on('stopUpdating', function () { clearInterval(timer); });
-
+    //    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
+    //    socket.on('stopUpdating', function () { clearInterval(timer); });
+    //listen when a player has won
+    isConnected.on('playerWon', function (param) {
+        console.log('player ' + param + ' has won');
+        isConnected.emit('playerWon', param);
+    });
 });

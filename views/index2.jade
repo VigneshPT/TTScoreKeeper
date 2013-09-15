@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    script.
+        var players = !{JSON.stringify(players)};
+    //div
+        div.container
+        h1.text-center
+            img.geLogo(src="/images/GE_logo.png")
+            span Table Tennis Tournament
+    div(ng-app="tt")
+        div(ng-controller='master')
+            div.text-center
+                //div.well
+                span.round-number Round {{round}}
+                div
+                    div.left-wrap
+                        div
+                            //h1 Player 1
+                            h2 {{player1.name}}
+                            div
+                                //div.col-md-6
+                                    img.img-polaroid.img-thumbnail(src='{{player1.profileImage}}')
+                                div.player-image.img-thumbnail(style='background:url({{player1.profileImage}}) no-repeat; background-size:contain;')
+                                        //h3 Points
+                                div.player-points {{player1.points}}
+                         div.winning-message.text-center(id='winning-message1') WINS
+                    div.right-wrap
+                        div
+                            //h1 Player 2
+                            h2 {{player2.name}}
+                            div
+                                //div.col-md-6
+                                        img.img-polaroid.img-thumbnail(src='{{player2.profileImage}}')
+                                div.player-image.img-thumbnail(style='background:url({{player2.profileImage}}) no-repeat; background-size:contain;')
+                                        //h3 Points 
+                                div.player-points {{player2.points}}
+                        div.winning-message.text-center(id='winning-message2') WINS

@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".set-picture-button").click(function () {
         var profileId = prompt("Enter Facebook profile id (example: vigneshpt)", "");
         var imageSource = "";
-        if(profileId !== "")
+        if (profileId !== "")
             imageSource = "http://graph.facebook.com/" + profileId + "/picture?width=300&height=300";
         //var dataToSend = { "src": encodeURI(imageSource) };
         if (this.id == 'player1SetPicture') {
@@ -58,14 +58,14 @@ $(document).ready(function () {
         var name = prompt("Enter name: ");
         var param = null;
         if (this.id == 'editpname1') {
-            if(typeof name === "undefined" || name === "null" || name===""){
+            if (typeof name === "undefined" || name === "null" || name === "") {
                 name = "Home";
             }
             $('#player1namelabel').text(name);
             param = 1;
         }
         else if (this.id == 'editpname2') {
-            if(typeof name === "undefined" || name === "null"){
+            if (typeof name === "undefined" || name === "null") {
                 name = "Away";
             }
             $('#player2namelabel').text(name);
@@ -81,64 +81,55 @@ $(document).ready(function () {
         });
     });
 
+    $('.win-button').click(function () {
+        var player = this.id == "player1WinButton" ? 1 : 2;
+        socket.emit('playerWon', player);
+    });
+
+
     $('.updateScoreButton').click(function () {
+        var player = 0;
+        var postURL = "";
+        var currentPoints = 0;
         switch (this.id) {
             case "upbutton1":
                 {
-                    //$('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1);
-                    $.ajax({
-                        url: "/push",
-                        type: "POST",
-                        processData: false,
-                        data: 'player=1&score=' + parseInt($('#player1Points').text(), 10),
-                        success: function (data) { console.log(data); $('#player1Points').text(parseInt($('#player1Points').text(), 10) + 1); },
-                        error: function (err) { console.log(err); }
-                    });
+                    player = 1;
+                    postURL = "/push";
+                    currentPoints = parseInt($('#player1Points').text(), 10);
                     break;
                 }
             case "upbutton2":
                 {
-                    $.ajax({
-                        url: "/push",
-                        type: "POST",
-                        processData: false,
-                        data: 'player=2&score=' + parseInt($('#player2Points').text(), 10),
-                        success: function (data) { console.log(data); $('#player2Points').text(parseInt($('#player2Points').text(), 10) + 1); },
-                        error: function (err) { console.log(err); }
-                    });
-
+                    player = 2;
+                    postURL = "/push";
+                    currentPoints = parseInt($('#player2Points').text(), 10);
                     break;
                 }
             case "downbutton1":
                 {
-                    var tempPoints = parseInt($('#player1Points').text(), 10);
-                    if (tempPoints > 0) {
-                        $.ajax({
-                            url: "/pop",
-                            type: "POST",
-                            processData: false,
-                            data: 'player=1&score=' + parseInt($('#player1Points').text(), 10),
-                            success: function (data) { console.log(data); $('#player1Points').text(tempPoints - 1); },
-                            error: function (err) { console.log(err); }
-                        });
-                    }
+                    player = 1;
+                    postURL = "/pop";
+                    currentPoints = parseInt($('#player1Points').text(), 10);
                     break;
                 }
             case "downbutton2":
                 {
-                    var tempPoints = parseInt($('#player2Points').text(), 10);
-                    if (tempPoints > 0) {
-                        $.ajax({
-                            url: "/pop",
-                            type: "POST",
-                            processData: false,
-                            data: 'player=2&score=' + parseInt($('#player2Points').text(), 10),
-                            success: function (data) { console.log(data); $('#player2Points').text(tempPoints - 1); },
-                            error: function (err) { console.log(err); }
-                        });
-                    }
+                    player = 2;
+                    postURL = "/pop";
+                    currentPoints = parseInt($('#player2Points').text(), 10);
                     break;
                 }
+        }
+        if (currentPoints > 0 || postURL=="/push") {
+            $.ajax({
+                url: postURL,
+                type: "POST",
+                processData: false,
+                data: 'player=' + player + '&score=' + currentPoints,
+                success: function (data) { console.log(data); $('#player' + player + 'Points').text(currentPoints + (postURL == "/push" ? (1) : (-1))); },
+                error: function (err) { console.log(err); }
+            });
         }
     });
 });

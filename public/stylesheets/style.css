@@ -2,6 +2,10 @@
     font-family: ScoreBoard;
     src: url(/font/scoreboard.ttf) format('truetype');
 }
+@font-face{
+    font-family: DigitalScoreBoard;
+    src: url(/font/DS-DIGI.ttf) format('truetype');
+}
 
 body {
   padding: 50px;
@@ -28,12 +32,42 @@ a {
     color: #fff;
 }
 
-.set-picture-button{float: right;}
+/*.set-picture-button{float: right;}*/
 
-.player-points{font-family:ScoreBoard;font-size: 197px;line-height: 149px;}
+.player-points{font-family:DigitalScoreBoard;/*font-size: 197px;line-height: 149px;*/font-size: 600px;
+line-height: 400px;text-align: center;}
 
 .next-round-button{margin-bottom: 10px;}
-.player-name-label {font-size: xx-large; font-weight: bold;float: left;}
-.edit-name-button{margin-left: 20px;float: left;margin-top: 5px;}
-.player-points-label{clear: left;float: none;}
+.next-round-button span{padding-right: 10px;}
+.player-name-label {font-size: xx-large; font-weight: bold;text-align: center;}
+.edit-name-button{margin-left: 20px;float: left;}
+.player-points-label{clear: left;float: none;margin-top: 0 !important;}
+.increase{height: 70px;font-size: 38px; margin-bottom: 20px;}
+.point-wrapper{margin: 0 0 15px;}
+.player-wrap{min-height: 65px;margin: 15px 0 15px 0;}
 
+.admin-page-wrap{position: relative;top: -30px;}
+.hidden-xs.hidden-sm{display: inline-block;}
+.button-group{width: 100%;}
+
+/* to look good on phone*/
+@media only screen and (max-width: 320px){  
+    .player-name-label{font-size:small;float: none;text-align: center;}
+    .set-picture-button{float: none;width: 100%;}
+}
+
+
+/*index2.jade styles*/
+.left-wrap{width: 50%;float: left;position: relative;}
+.right-wrap{width: 50%;float: left;position: relative;}
+.img-polaroid{position: absolute;}
+.player-image{width: 400px;
+height: 400px;
+position: absolute;
+z-index: -1;
+left: 19%;
+opacity: 0.5;
+}
+.round-number{font-size: 60px;}
+.winning-message{font-size: xx-large;}
+h2{text-align: center;}

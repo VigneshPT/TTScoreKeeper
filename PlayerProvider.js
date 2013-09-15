@@ -15,7 +15,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 
 PlayerProvider = function (host, port) {
-    this.db = new Db('tt-score-keeping-db', new Server(host, port, { auto_reconnect: true, safe: false }, {}));
+    this.db = new Db('tt-score-keeping-db', new Server(host, port, { auto_reconnect: true, safe: true }, {}));
     this.db.open(function (err, db) {
         if (!err) {
             console.log('connected to players tt-score-keeping db');
