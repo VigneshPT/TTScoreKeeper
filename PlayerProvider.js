@@ -3,6 +3,7 @@ var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
 var BSON = require('mongodb').BSONPure;
 var ObjectId = require('mongodb').ObjectID;
+var MongoClient = require('mongodb').MongoClient;
 /*
     { 
         _id:ObjectID,
@@ -12,45 +13,43 @@ var ObjectId = require('mongodb').ObjectID;
         points: 0
     }
 */
-
-
-PlayerProvider = function (host, port) {
-    this.db = new Db('tt-score-keeping-db', new Server(host, port, { auto_reconnect: true, safe: true }, {}));
-    this.db.open(function (err, db) {
-        if (!err) {
-            console.log('connected to players tt-score-keeping db');
-            db.collection('players', {/*strict:true*/
-            }, function (error, player_collection) {
-                /*if (error) {
-                console.log("the players collection doesn't exist, creating default players");*/
-                player_collection.count(function (err, count) {
-                    if (error || count < 2) {
-                        console.log("the players collection doesn't exist, creating default players");
-                        player_collection.drop();
-                        player_collection.insert(defaultPlayers, { safe: true }, function (err, result) {
-                            if (!err)
-                                console.log('inserted default players');
-                        });
-                    }
-                });
-                /*if (err) {
+var connection_string = '127.0.0.1:27017/ttremote';
+if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
+  connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+  process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+  process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+  process.env.OPENSHIFT_APP_NAME;
+}
+var globalDB = null;
+function getDB() {
+    MongoClient.connect('mongodb://' + connection_string, function (err, db) {
+        if (err) throw err;
+        console.log('connected db');
+        var collection = db.collection('players'); // .find().toArray(function (err, docs) {
+        collection.count(function (err, count) {
+            if (err || count < 2) {
                 console.log("the players collection doesn't exist, creating default players");
-
-                db.collection('players', function (err, collection) {
+                collection.drop();
                 collection.insert(defaultPlayers, { safe: true }, function (err, result) {
-                if (!err)
-                console.log('inserted default players');
+                    if (!err)
+                        console.log('inserted default players');
                 });
-                });
-                }*/
-            });
-        }
+            }
+        });
+        //callback(null, db);
+        globalDB = db;
+        //db.close();
+        //});
     });
-    //this.db.lastError(function(){});
+};
+PlayerProvider = function () {
+    getDB();
 };
 
 PlayerProvider.prototype.getPlayerCollection = function (callback) {
-    this.db.collection('players', function (error, player_collection) {
+    if (!globalDB) getDB();
+    globalDB.collection('players', function (error, player_collection) {
         if (error) callback(error);
         else callback(null, player_collection);
     });
@@ -109,15 +108,6 @@ PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, cal
                     });
                 }
             });
-            /*players.update({ playerNumber: playerNo }, { $set: { profileImage: imageSource} }, { multi: false, safe: false, upset: false }, function (error, result) {
-            if (!error) {
-            console.log("imageSource updated for player" + playerNo);
-            console.log('affected ' + result + " docs");
-            callback();
-            }
-            else
-            console.log(error);
-            });*/
         }
     });
 };

@@ -13,9 +13,9 @@ var express = require('express')
 
 var app = express();
 var isConnected = false;
-
+var port =process.env.OPENSHIFT_NODEJS_PORT || '3000';
 app.configure(function(){
-  app.set('port',/* process.env.PORT ||*/ 3000);
+  app.set('port',port);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -35,7 +35,7 @@ io.set('log level', 2);
 //io.set('transports', [ 'websocket', 'xhr-polling' ]);
 
 //connecting to db
-var playerProvider = new PlayerProvider('localhost', 27017);
+var playerProvider = new PlayerProvider();
 
 
 server.listen(app.get('port'), function(){
