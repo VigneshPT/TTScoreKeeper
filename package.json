@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "TTScoreKeeper",
   "version": "0.2.0",
   "author": "The WebMatrix Team <webmatrix@microsoft.com>",
@@ -32,38 +31,5 @@
   "engines": {
     "node": ">=0.6.14"
   }
-=======
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url":  "http://www.openshift.com/"
-  },
-  "homepage": "http://www.openshift.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://gitub.com/openshift/origin-server"
-  },
 
-  "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
-  },
-
-  "dependencies": {
-  },
-  "devDependencies": {},
-  "bundleDependencies": [],
-
-  "private": true,
-  "main": "server.js"
->>>>>>> d5335ecbcb6a315c9d0edb40e7238b15022a1ac6
 }
