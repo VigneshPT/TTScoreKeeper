@@ -32,7 +32,7 @@ app.configure('development', function(){
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 io.set('log level', 2);
-io.set('transports', [ 'websocket', 'xhr-polling' ]);
+//io.set('transports', [ 'websocket', 'xhr-polling' ]);
 
 //connecting to db
 var playerProvider = new PlayerProvider('localhost', 27017);

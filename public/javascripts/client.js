@@ -1,4 +1,4 @@
-var socket = io.connect("http://" + location.host);
+
 var app = angular.module("tt", []);
 app.controller('master', ["$scope", "$http", function ($scope, $http) {
     $scope.player1 = players[0] || { name: "Home", points: 0, profileImage: "/images/men.jpg" };
@@ -14,7 +14,7 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
             $scope.player2.profileImage = "/images/men.jpg"
         }
     });
-
+    var socket = io.connect("http://" + location.host);
     $scope.round = 1;
     socket.on('updateCount', function (e) {
         $scope.player1.points = e[0].points;
@@ -45,18 +45,19 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
             $scope.round = 1;
         $scope.$apply();
     });
-
     
-} ]);
-
-socket.on('playerWon', function (param) {
+    socket.on('playerWon', function (param) {
         //Decide how to show the WIN message in a good way
         if (param == 1)
         { document.getElementById('player-points-1').style.color="green"; }
         else if (param == 2)
         { document.getElementById('player-points-2').style.color="green"; }
         
- });
+    });
+    
+} ]);
+
+
 
 
 /* admin.jade javascript */
