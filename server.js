@@ -38,7 +38,7 @@ io.set('log level', 2);
 var playerProvider = new PlayerProvider();
 
 
-server.listen(app.get('port'),process.env.OPENSHIFT_NODEJS_PORT||"localhost", function(){
+server.listen(app.get('port'),process.env.OPENSHIFT_NODEJS_IP||"localhost", function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
