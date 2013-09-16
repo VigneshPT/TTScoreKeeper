@@ -34,7 +34,7 @@ a {
 
 /*.set-picture-button{float: right;}*/
 
-.player-points{font-family:DigitalScoreBoard;/*font-size: 197px;line-height: 149px;*/font-size: 600px;
+.player-points{font-family:DigitalScoreBoard;/*font-sizefont-size: 197px;line-height: 149px;*/ font-size: 400px;;
 line-height: 400px;text-align: center;}
 
 .next-round-button{margin-bottom: 10px;}
