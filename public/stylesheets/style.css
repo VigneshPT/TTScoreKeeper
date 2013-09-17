@@ -4,7 +4,7 @@
 }
 @font-face{
     font-family: DigitalScoreBoard;
-    src: url(/font/DS-DIGI.ttf) format('truetype');
+    src: url(/font/DS-DIGI.TTF) format('truetype');
 }
 
 body {
