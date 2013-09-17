@@ -83,9 +83,14 @@ $(document).ready(function () {
 
     $('.win-button').click(function () {
         var player = this.id == "player1WinButton" ? 1 : 2;
-        socket.emit('playerWon', player);
+        //socket.emit('playerWon', player);
+        $.ajax({
+            url:"/triggerPlayerWin",
+            data: "player="+player,
+            success:function(successmessage){console.log(successmessage);},
+            error: function(errormessage){console.log(errormessage);}
+        });
     });
-
 
     $('.updateScoreButton').click(function () {
         var player = 0;
@@ -131,5 +136,10 @@ $(document).ready(function () {
                 error: function (err) { console.log(err); }
             });
         }
+    });
+    
+    $.getJSON("/player_list.json",function(data){
+        var playerNames=[];
+        alert(JSON.stringify(data));
     });
 });

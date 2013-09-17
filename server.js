@@ -174,7 +174,11 @@ app.post('/pop', function(req, res){
     // res.redirect('/1132');
 });
 
-
+app.post('/triggerPlayerWin',function(req,res){
+    //listen when a player has won
+    isConnected.emit('playerWon', req.body.player);
+    res.send('player'+player +" has won");
+});
 
 
 io.sockets.on('connection', function (socket) {
@@ -182,9 +186,4 @@ io.sockets.on('connection', function (socket) {
     isConnected.emit('connected');
     //    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
     //    socket.on('stopUpdating', function () { clearInterval(timer); });
-    //listen when a player has won
-    isConnected.on('playerWon', function (param) {
-        console.log('player ' + param + ' has won');
-        isConnected.emit('playerWon', param);
-    });
 });
