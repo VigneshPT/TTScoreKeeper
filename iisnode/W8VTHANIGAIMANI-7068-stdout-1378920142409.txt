@@ -1,7 +1,0 @@
-info: socket.io started
-Express server listening on port \\.\pipe\1f8aa168-7a63-4da9-93cf-190bb606dd64
-[90mGET / [32m200 [90m60ms - 422[0m
-debug: served static content /socket.io.js
-debug: client authorized
-info: handshake authorized Bib8-3kTuQxSf06-C5dJ
-[90mGET / [32m200 [90m5ms - 422[0m

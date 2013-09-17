@@ -1,3 +1,0 @@
-info: socket.io started
-Express server listening on port \\.\pipe\c4d99408-d93c-411d-8333-e9c9424844e5
-[90mGET / [31m500 [90m116ms[0m
