@@ -151,7 +151,7 @@ $(document).ready(function () {
             players.push({
                 id: doublesArray[i].id,
                 name: doublesArray[i].name,
-                profilePic: doublesArray[i].profilePic[Math.ceil(Math.random())]
+                profilePic: doublesArray[i].profilePic[Math.round(Math.random())]
             });
             $('.player-dropdown').append($("<option></option>").attr({ "value": players[players.length - 1].id, "profilePic": players[players.length - 1].profilePic }).text(players[players.length - 1].name));
         }
