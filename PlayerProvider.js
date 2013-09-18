@@ -69,6 +69,14 @@ PlayerProvider.prototype.insertRoundData = function(data,callback){
       });
   });  
 };
+PlayerProvider.prototype.getAllRounds = function(callback){
+    this.getRoundCollection(function(error,round_collection){
+        round_collection.find().sort({timestamp:-1}).toArray(function(err,results){
+            if(err)callback(err);
+            else callback(null,results);
+        });
+    });
+};
 PlayerProvider.prototype.getPlayers = function (callback) {
     this.getPlayerCollection(function (error, player_collection) {
         player_collection.find().sort({playerNumber:1}).toArray(function (error, results) {

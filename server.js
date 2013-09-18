@@ -87,6 +87,14 @@ app.get('/1132', function (req, res) {
     
 });
 
+app.get('/admin/rounds',function(req,res){
+    playerProvider.getAllRounds(function(err,_rounds){
+        if(!err)
+            res.render('rounds',{rounds:_rounds});
+    });
+});
+
+
 app.get('/resetScores', function (req, res) {
     playerProvider.resetScores(function (err, result) {
         if (err) { console.log(err); res.send(err); }
@@ -174,13 +182,30 @@ app.post('/pop', function(req, res){
     // res.redirect('/1132');
 });
 
+Date.prototype.today = function() {
+	var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+		"July", "August", "September", "October", "November", "December"
+	];
+	return (weekday[this.getDay()] + ", " + monthNames[this.getMonth()] + " " + ((this.getDate() < 10) ? "0" : "") + this.getDate());
+};
+//For the time now
+Date.prototype.timeNow = function() {
+	return ((this.getHours() < 10) ? "0" : "") + this.getHours() + ":" + ((this.getMinutes() < 10) ? "0" : "") + this.getMinutes();
+};
+
 app.post('/recordRoundInfo',function(req,res){
     //post round info
+    var date = new Date();
+    var _readableTimestamp = date.timeNow() + ", "+ date.today();
     var data = {
         p1Name : req.body.p1Name,
         p1Score: req.body.p1Score,
         p2Name: req.body.p2Name,
-        p2Score: req.body.p2Score
+        p2Score: req.body.p2Score,
+        readableTimestamp: _readableTimestamp,
+        timestamp: Date.now()
+        
     }
     playerProvider.insertRoundData(data,function(error,docs){
         if(error) res.send('error inserting round data');
