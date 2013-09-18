@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div
+        table
+            thead
+                tr: th Rounds
+            tbody
+                each round, i in _rounds
+                    tr
+                        td #{round.readableTimestamp}
+                        td #{round.p1Name}
+                        td #{round.p1Score}
+                        td #{round.p2Name}
+                        td #{round.p2Score}
