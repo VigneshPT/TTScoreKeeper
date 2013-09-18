@@ -51,6 +51,9 @@ line-height: 400px;text-align: center;}
 .button-group{width: 100%;}
 .player-dropdown{float: right;
     width: 42px;}
+    
+.rounds-table{border-spacing: 10px;
+border-collapse: separate;}
 /* to look good on phone*/
 @media only screen and (max-width: 320px){  
     .player-name-label{font-size:small;float: none;text-align: center;}

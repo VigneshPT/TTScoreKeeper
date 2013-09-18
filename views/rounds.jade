@@ -2,9 +2,14 @@ extends layout
 
 block content
     div
-        table(border='1')
+        table.rounds-table(border='1')
             thead
-                tr: th Rounds
+                tr
+                    td Player 1
+                    td Score
+                    td Player 2
+                    td Score
+                    td TimeStamp
             tbody
                 each round, i in rounds
                     tr
