@@ -2,11 +2,11 @@ extends layout
 
 block content
     div
-        table
+        table(border='1')
             thead
                 tr: th Rounds
             tbody
-                each round, i in _rounds
+                each round, i in rounds
                     tr
                         td #{round.readableTimestamp}
                         td #{round.p1Name}
