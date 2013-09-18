@@ -37,6 +37,7 @@ $(document).ready(function () {
             success: function (successmessage) { console.log(successmessage); },
             error: function (errormessage) { console.log(errormessage); }
         });
+        //sending the round info. 
         $.ajax({
             url: '/recordRoundInfo',
             type: 'POST',
@@ -55,6 +56,15 @@ $(document).ready(function () {
             processData: false,
             success: function (successmessage) { console.log(successmessage); },
             error: function (errormessage) { console.log(errormessage); }
+        });
+        //sending the round info.. 
+        $.ajax({
+            url: '/recordRoundInfo',
+            type: 'POST',
+            processData: false,
+            data: 'p1Name='+$('#player1namelabel').text()+'&p2Name='+$('#player2namelabel').text()+'&p1Score='+$('#player1Points').text()+'&p2Score='+$('#player2Points').text(),
+            success: function (successmessage) { console.log('updated round info'); },
+            error: function (errormessage) { console.log('error updating round info'); }
         });
         $('#player1Points').text(0);
         $('#player2Points').text(0);
