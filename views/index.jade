@@ -14,7 +14,7 @@ block content
                 div.well
                     h1.text-center(ng-bind-template="Round {{round}}")
                 div.row
-                    div.col-md-6
+                    div.col-md-6(style='z-index: -2;')
                         div.well(style="height:500px")
                             //h1 Player 1
                             h2 {{player1.name}}
@@ -24,7 +24,7 @@ block content
                                 div.col-md-6
                                     h3 Points
                                         div.player-points(id='player-points-1', ng-bind="player1.points")
-                    div.col-md-6
+                    div.col-md-6(style='z-index: -2;')
                         div.well(style="height:500px")
                             //h1 Player 2
                             h2 {{player2.name}}
