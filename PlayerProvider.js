@@ -54,7 +54,21 @@ PlayerProvider.prototype.getPlayerCollection = function (callback) {
         else callback(null, player_collection);
     });
 };
-
+PlayerProvider.prototype.getRoundCollection = function(callback){
+    if(!globalDB) getDB();
+    globalDB.collection('rounds',function(error,round_collection){
+        if(error) callback(error);
+        else callback(null,round_collection);
+    });
+}
+PlayerProvider.prototype.insertRoundData = function(data,callback){
+  this.getRoundCollection(function(error,round_collection){
+      round_collection.insert(data,{safe:true},function(err,docs){
+          if(err){console.log('could not insert round data'); callback(err);}
+          else{ console.log('inserted round data'); callback(null,docs);}
+      });
+  });  
+};
 PlayerProvider.prototype.getPlayers = function (callback) {
     this.getPlayerCollection(function (error, player_collection) {
         player_collection.find().sort({playerNumber:1}).toArray(function (error, results) {

@@ -174,6 +174,22 @@ app.post('/pop', function(req, res){
     // res.redirect('/1132');
 });
 
+app.post('/recordRoundInfo',function(req,res){
+    //post round info
+    var data = {
+        p1Name : req.body.p1Name,
+        p1Score: req.body.p1Score,
+        p2Name: req.body.p2Name,
+        p2Score: req.body.p2Score
+    }
+    playerProvider.insertRoundData(data,function(error,docs){
+        if(error) res.send('error inserting round data');
+        else{
+            res.send('successfully inserted round data');
+        }
+    });
+});
+
 app.post('/triggerPlayerWin',function(req,res){
     //listen when a player has won
     isConnected.emit('playerWon', req.body.player);
