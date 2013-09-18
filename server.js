@@ -90,7 +90,7 @@ app.get('/1132', function (req, res) {
 app.get('/admin/rounds',function(req,res){
     playerProvider.getAllRounds(function(err,_rounds){
         if(!err)
-            res.render('rounds',{rounds:_rounds});
+            res.render('rounds',{title:'Rounds',rounds:_rounds});
     });
 });
 
