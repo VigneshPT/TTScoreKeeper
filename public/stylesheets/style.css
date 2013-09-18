@@ -49,7 +49,8 @@ line-height: 400px;text-align: center;}
 .admin-page-wrap{position: relative;top: -30px;}
 .hidden-xs.hidden-sm{display: inline-block;}
 .button-group{width: 100%;}
-
+.player-dropdown{float: right;
+    width: 42px;}
 /* to look good on phone*/
 @media only screen and (max-width: 320px){  
     .player-name-label{font-size:small;float: none;text-align: center;}

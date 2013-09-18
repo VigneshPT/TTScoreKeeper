@@ -85,10 +85,10 @@ $(document).ready(function () {
         var player = this.id == "player1WinButton" ? 1 : 2;
         //socket.emit('playerWon', player);
         $.ajax({
-            url:"/triggerPlayerWin",
-            data: "player="+player,
-            success:function(successmessage){console.log(successmessage);},
-            error: function(errormessage){console.log(errormessage);}
+            url: "/triggerPlayerWin",
+            data: "player=" + player,
+            success: function (successmessage) { console.log(successmessage); },
+            error: function (errormessage) { console.log(errormessage); }
         });
     });
 
@@ -126,7 +126,7 @@ $(document).ready(function () {
                     break;
                 }
         }
-        if (currentPoints > 0 || postURL=="/push") {
+        if (currentPoints > 0 || postURL == "/push") {
             $.ajax({
                 url: postURL,
                 type: "POST",
@@ -137,9 +137,56 @@ $(document).ready(function () {
             });
         }
     });
-    
-    $.getJSON("/player_list.json",function(data){
-        var playerNames=[];
-        alert(JSON.stringify(data));
+    var players = [];
+    $.getJSON("/player_list.json", function (data) {
+
+        var singlesArray = data.singles;
+        $('.player-dropdown').append($("<option></option>").attr({ "value": -1, "profilePic": "" }).text("Select Option"));
+        for (var i = 0; i < singlesArray.length; i++) {
+            players.push(singlesArray[i]);
+            $('.player-dropdown').append($("<option></option>").attr({ "value": players[i].id, "profilePic": players[i].profilePic }).text(players[i].name));
+        }
+        var doublesArray = data.doubles;
+        for (var i = 0; i < doublesArray.length; i++) {
+            players.push({
+                id: doublesArray[i].id,
+                name: doublesArray[i].name,
+                profilePic: doublesArray[i].profilePic[Math.ceil(Math.random())]
+            });
+            $('.player-dropdown').append($("<option></option>").attr({ "value": players[players.length - 1].id, "profilePic": players[players.length - 1].profilePic }).text(players[players.length - 1].name));
+        }
+    });
+    $(".player-dropdown").change(function () {
+        var playernumber = this.id == "playerDropdown1" ? 1 : 2;
+        var name = $(this).find("option:selected").text();
+        var profilePic = $(this).find("option:selected").attr("profilePic");
+        var val = $(this).find("option:selected").attr("value");
+        //to update playerName
+        if (val != -1) {
+            $.ajax({
+                url: '/updatePlayerName/' + playernumber,
+                type: 'POST',
+                processData: false,
+                data: 'pname=' + name,
+                success: function (successmessage) { console.log(successmessage); },
+                error: function (errormessage) { console.log(errormessage); }
+            });
+            $('#player' + playernumber + 'namelabel').text(name);
+            var imageSource = "";
+            if (profilePic == null || profilePic == "")
+                imageSource = "/images/men.jpg";
+            else
+                imageSource = "http://graph.facebook.com/" + profilePic + "/picture?width=300&height=300";
+
+            $.ajax({
+                url: "http://" + location.host + '/admin/updateUserPicture/' + playernumber,
+                type: "POST",
+                processData: false,
+                data: 'src=' + encodeURIComponent(imageSource),
+                success: function (data) { console.log(data); },
+                error: function () { console.log('error'); }
+
+            });
+        }
     });
 });

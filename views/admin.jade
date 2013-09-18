@@ -25,7 +25,9 @@ block content
                     button.btn-lg.btn-block.btn-danger.glyphicon.glyphicon-arrow-down.updateScoreButton(id="downbutton1")
 
                 div.row.player-wrap
-                    div.player-name-label(id='player1namelabel')=players[0].name
+                    div.player-name-label
+                        span(id='player1namelabel')= players[0].name
+                        select.btn.btn-default.player-dropdown(id='playerDropdown1') P
                     div.btn-group.btn-group-vertical.button-group
                         div.btn.btn-default.edit-name-button(id='editpname1')
                             span.glyphicon.glyphicon-pencil
@@ -53,7 +55,9 @@ block content
                 
                 
                 div.row.player-wrap
-                    div.player-name-label(id='player2namelabel')=players[1].name
+                    div.player-name-label
+                        span(id='player2namelabel')= players[1].name
+                        select.btn.btn-default.player-dropdown(id='playerDropdown2') P
                     div.btn-group.btn-group-vertical.button-group
                         div.btn.btn-default.edit-name-button(id='editpname2')
                             span.glyphicon.glyphicon-pencil
