@@ -61,7 +61,7 @@ left: -68px;}
 .point-wrapper{margin: 0 0 15px;}
 .player-wrap{min-height: 65px;margin: 15px 0 15px 0;}
 
-.admin-page-wrap{position: relative;top: -30px;}
+.admin-page-wrap{margin-top: 20px;}
 .hidden-xs.hidden-sm{display: inline-block;}
 .button-group{width: 100%;}
 .player-dropdown{float: right;
