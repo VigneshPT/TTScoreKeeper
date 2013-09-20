@@ -32,7 +32,15 @@ a {
     color: #fff;
 }
 
+.home-page-wrap .title-image img{float: left;}
+.home-page-wrap .title-text{font-size: 24px;
+padding-left: 10px;}
+.home-page-wrap .title-container{left: 22%;position: relative;}
 /*.set-picture-button{float: right;}*/
+
+.well{
+    padding: 0px !important;
+}
 
 .player-points{font-family:DigitalScoreBoard;/*font-sizefont-size: 197px;line-height: 149px;*/ font-size: 400px;
 line-height: 400px;text-align: center;}

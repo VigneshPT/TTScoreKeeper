@@ -42,7 +42,7 @@ $(document).ready(function () {
             url: '/recordRoundInfo',
             type: 'POST',
             processData: false,
-            data: 'p1Name='+$('#player1namelabel').text()+'&p2Name='+$('#player2namelabel').text()+'&p1Score='+$('#player1Points').text()+'&p2Score='+$('#player2Points').text(),
+            data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
             success: function (successmessage) { console.log('updated round info'); },
             error: function (errormessage) { console.log('error updating round info'); }
         });
@@ -62,7 +62,7 @@ $(document).ready(function () {
             url: '/recordRoundInfo',
             type: 'POST',
             processData: false,
-            data: 'p1Name='+$('#player1namelabel').text()+'&p2Name='+$('#player2namelabel').text()+'&p1Score='+$('#player1Points').text()+'&p2Score='+$('#player2Points').text(),
+            data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
             success: function (successmessage) { console.log('updated round info'); },
             error: function (errormessage) { console.log('error updating round info'); }
         });
@@ -193,6 +193,9 @@ $(document).ready(function () {
             var imageSource = "";
             if (profilePic == null || profilePic == "")
                 imageSource = "/images/men.jpg";
+            //else if (profilePic.contains("http")) {
+            //    imageSource = profilePic;
+            //}
             else
                 imageSource = "http://graph.facebook.com/" + profilePic + "/picture?width=300&height=300";
 

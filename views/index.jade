@@ -3,18 +3,18 @@ extends layout
 block content
     script.
         var players = !{JSON.stringify(players)};
-    div.row
-        div.container
-            h1.col-md-12.text-center
+    div.row.home-page-wrap
+        div.container.title-container
+            h1.col-md-12.title-image
                 img.geLogo(src="/images/GE_logo.png")
-                span Table Tennis Tournament
+            span.title-text Table Tennis Tournament
     div.row(ng-app="tt")
         div.container(ng-controller='master')
             div.col-md-12
                 div.well
                     h1.text-center(ng-bind-template="Round {{round}}")
                 div.row
-                    div.col-md-6
+                    div.col-md-6(style='z-index:-4;')
                         div.well(style="height:500px")
                             //h1 Player 1
                             h2 {{player1.name}}
@@ -24,7 +24,7 @@ block content
                                 div.col-md-6
                                     h3 Points
                                         div.player-points(id='player-points-1', ng-bind="player1.points")
-                    div.col-md-6
+                    div.col-md-6(style='z-index:-5;')
                         div.well(style="height:500px")
                             //h1 Player 2
                             h2 {{player2.name}}
