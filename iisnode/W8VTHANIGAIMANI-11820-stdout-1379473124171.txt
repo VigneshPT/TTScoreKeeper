@@ -1,0 +1,3 @@
+info: socket.io started
+Express server listening on port 3000
+connected db

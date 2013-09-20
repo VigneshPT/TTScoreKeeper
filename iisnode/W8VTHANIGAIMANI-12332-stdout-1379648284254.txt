@@ -1,0 +1,25 @@
+info: socket.io started
+Express server listening on port 3000
+connected db
+[90mGET /admin/rounds [32m200 [90m372ms - 961[0m
+[90mGET /stylesheets/style.css [32m200 [90m13ms - 2kb[0m
+[90mGET /javascripts/client.js [32m200 [90m10ms - 2.15kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m39ms - 95.07kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m559ms - 576.7kb[0m
+[90mGET /1132 [32m200 [90m106ms - 3.53kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m12ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m15ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m16ms[0m
+[90mGET /javascripts/client.js [36m304 [90m1ms[0m
+[90mGET /javascripts/admin.js [32m200 [90m22ms - 8.68kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m62ms - 90.92kb[0m
+[90mGET /player_list.json [32m200 [90m2ms - 7.01kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m4ms - 16.06kb[0m
+[90mGET / [32m200 [90m10ms - 1.97kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m2ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m3ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m6ms[0m
+[90mGET /javascripts/client.js [36m304 [90m9ms[0m
+info: handshake authorized g4O1x3HNgjTzNjiZcioc
+[90mGET /images/GE_logo.png [32m200 [90m328ms - 5.69kb[0m
+[90mGET /font/DS-DIGI.TTF [32m200 [90m99ms - 23.88kb[0m

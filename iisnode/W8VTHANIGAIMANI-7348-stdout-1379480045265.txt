@@ -1,0 +1,399 @@
+info: socket.io started
+Express server listening on port 3000
+connected db
+[90mGET /1132 [32m200 [90m434ms - 3.52kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m9ms - 1.89kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m80ms - 95.07kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m2ms - 7.37kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m971ms - 90.92kb[0m
+[90mGET /javascripts/client.js [32m200 [90m8ms - 2.15kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m8ms - 16.06kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m3233ms - 576.7kb[0m
+[90mGET /player_list.json [32m200 [90m6ms - 6.58kb[0m
+http://graph.facebook.com/fraizal/picture?width=300&height=300
+{ _id: 5236bdefee4b210424000001,
+  name: 'function (e){return x.access(this,function(e){return e===t?x.text(this):this.empty().append((this[0]',
+  playerNumber: 1,
+  points: 7,
+  profileImage: '/images/men.jpg' }
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m444ms - 28[0m
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m469ms - 40[0m
+[90mGET /1132 [32m200 [90m44ms - 3.62kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m6ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m15ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m12ms[0m
+[90mGET /javascripts/admin.js [36m304 [90m15ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m17ms[0m
+[90mGET /javascripts/client.js [36m304 [90m16ms[0m
+[90mGET /javascripts/admin.js [36m304 [90m2ms[0m
+[90mGET /javascripts/client.js [36m304 [90m3ms[0m
+[90mGET /player_list.json [36m304 [90m2ms[0m
+http://graph.facebook.com/ahamad.hussain.50/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m15ms - 28[0m
+{ _id: 5236bdefee4b210424000002,
+  name: 'function (e){return x.access(this,function(e){return e===t?x.text(this):this.empty().append((this[0]',
+  playerNumber: 2,
+  points: 2,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m64ms - 40[0m
+[90mGET / [32m200 [90m49ms - 2.16kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m8ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m14ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m18ms[0m
+[90mGET /javascripts/client.js [36m304 [90m24ms[0m
+[90mGET /images/GE_logo.png [32m200 [90m38ms - 5.69kb[0m
+info: handshake authorized y8vcJgy79rdRvIQXawuK
+[90mGET /font/DS-DIGI.TTF [32m200 [90m18ms - 23.88kb[0m
+[90mGET / [36m304 [90m38ms[0m
+info: transport end (socket end)
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m8ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m15ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m20ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m24ms[0m
+[90mGET /javascripts/client.js [36m304 [90m28ms[0m
+info: handshake authorized ncvi_YX5bSA0L3U1awuL
+[90mGET /font/DS-DIGI.TTF [36m304 [90m2ms[0m
+[90mGET /1132 [32m200 [90m18ms - 3.71kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m4ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m12ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m18ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m18ms[0m
+[90mGET /javascripts/client.js [36m304 [90m9ms[0m
+[90mGET /javascripts/admin.js [32m200 [90m44ms - 7.43kb[0m
+[90mGET /player_list.json [36m304 [90m0ms[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [36m304 [90m1ms[0m
+[90mGET /1132 [36m304 [90m17ms[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m6ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m10ms[0m
+[90mGET /javascripts/admin.js [36m304 [90m14ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m18ms[0m
+[90mGET /javascripts/client.js [36m304 [90m21ms[0m
+[90mGET /player_list.json [36m304 [90m1ms[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [36m304 [90m1ms[0m
+resetted players 
+resetted everything to default
+[90mGET /resetAll [32m200 [90m214ms - 7[0m
+[90mGET /images/men.jpg [32m200 [90m15ms - 4.88kb[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m11ms - 28[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m14ms - 28[0m
+[90mGET / [32m200 [90m13ms - 1.96kb[0m
+info: transport end (socket end)
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m7ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m7ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m13ms[0m
+[90mGET /javascripts/client.js [36m304 [90m17ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m29ms[0m
+info: handshake authorized Lpl5_jjSIqZYvyt5awuM
+[90mGET /images/men.jpg [36m304 [90m3ms[0m
+resetted players 
+resetted everything to default
+[90mGET /resetAll [32m200 [90m22ms - 7[0m
+[90mGET / [32m200 [90m11ms - 1.87kb[0m
+info: transport end (socket end)
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m4ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m13ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m17ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m23ms[0m
+[90mGET /javascripts/client.js [36m304 [90m22ms[0m
+info: handshake authorized idDDN8mfSMfbLA0SawuN
+[90mGET /images/men.jpg [36m304 [90m1ms[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m10ms - 28[0m
+[90mGET /1132 [32m200 [90m21ms - 3.62kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m30ms - 1.89kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m32ms - 7.44kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m39ms - 95.07kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m40ms - 90.92kb[0m
+[90mGET /javascripts/client.js [32m200 [90m36ms - 2.15kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m190ms - 576.7kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m3ms - 16.06kb[0m
+[90mGET /player_list.json [32m200 [90m1ms - 6.58kb[0m
+resetted players 
+resetted everything to default
+[90mGET /resetAll [32m200 [90m22ms - 7[0m
+[90mGET /1132 [32m200 [90m20ms - 3.52kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m15ms - 1.89kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m17ms - 7.44kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m22ms - 95.07kb[0m
+[90mGET /javascripts/client.js [32m200 [90m21ms - 2.15kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m28ms - 90.92kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m64ms - 576.7kb[0m
+[90mGET /player_list.json [32m200 [90m1ms - 6.58kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m2ms - 16.06kb[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m12ms - 28[0m
+http://graph.facebook.com/sincerekamal/picture?width=300&height=300
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Kamalakannan',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m27ms - 40[0m
+http://graph.facebook.com/narayanan.karuppiah/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m18ms - 28[0m
+{ _id: 523933b2ac8398b41c000002,
+  name: 'Narayanan',
+  playerNumber: 2,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m44ms - 40[0m
+http://graph.facebook.com/karthi.kasthuri/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m17ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Karthi Kasthuri',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/sincerekamal/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m41ms - 40[0m
+http://graph.facebook.com/sudanhari/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m16ms - 28[0m
+{ _id: 523933b2ac8398b41c000002,
+  name: 'Hariharasudan',
+  playerNumber: 2,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/narayanan.karuppiah/picture?width=300&height=300' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m39ms - 40[0m
+[90mGET /1132 [32m200 [90m22ms - 3.54kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m5ms - 1.89kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m9ms - 95.07kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m4ms - 7.56kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m11ms - 90.92kb[0m
+[90mGET /javascripts/client.js [32m200 [90m1ms - 2.15kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m49ms - 576.7kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m1ms - 16.06kb[0m
+[90mGET /player_list.json [32m200 [90m1ms - 6.58kb[0m
+http://graph.facebook.com/SreedharCS/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m18ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Sreedhar Ravikumar',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/karthi.kasthuri/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m41ms - 40[0m
+http://graph.facebook.com/arthi.ganesan.9/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m18ms - 28[0m
+{ _id: 523933b2ac8398b41c000002,
+  name: 'Arthi',
+  playerNumber: 2,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/sudanhari/picture?width=300&height=300' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m43ms - 40[0m
+[90mGET /1132 [32m200 [90m32ms - 3.54kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m8ms - 1.89kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m18ms - 95.07kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m5ms - 7.74kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m14ms - 90.92kb[0m
+[90mGET /javascripts/client.js [32m200 [90m3ms - 2.15kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m110ms - 576.7kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m1ms - 16.06kb[0m
+[90mGET /player_list.json [32m200 [90m2ms - 6.58kb[0m
+http://graph.facebook.com/arthi.ganesan.9/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m17ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Arthi',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/SreedharCS/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m156ms - 40[0m
+http://graph.facebook.com/ahamad.hussain.50/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m15ms - 28[0m
+{ _id: 523933b2ac8398b41c000002,
+  name: 'Ahmad',
+  playerNumber: 2,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/arthi.ganesan.9/picture?width=300&height=300' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m41ms - 40[0m
+{ player: '1', score: '0' }
+points updated for player1
+[90mPOST /push [32m200 [90m20ms - 7[0m
+[90mGET /1132 [32m200 [90m21ms - 3.52kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m9ms - 1.89kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m28ms - 95.07kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m25ms - 7.74kb[0m
+[90mGET /javascripts/client.js [32m200 [90m18ms - 2.15kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m41ms - 90.92kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m55ms - 576.7kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m2ms - 16.06kb[0m
+[90mGET /player_list.json [32m200 [90m3ms - 6.58kb[0m
+[90mGET /1132 [32m200 [90m17ms - 3.52kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [32m200 [90m5ms - 95.07kb[0m
+[90mGET /stylesheets/style.css [32m200 [90m2ms - 1.93kb[0m
+[90mGET /javascripts/jquery.min.js [32m200 [90m3ms - 90.92kb[0m
+[90mGET /javascripts/admin.js [32m200 [90m2ms - 7.66kb[0m
+[90mGET /javascripts/client.js [32m200 [90m4ms - 2.15kb[0m
+[90mGET /javascripts/angular.js [32m200 [90m20ms - 576.7kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [32m200 [90m1ms - 16.06kb[0m
+[90mGET /player_list.json [32m200 [90m1ms - 6.58kb[0m
+info: transport end (socket end)
+[90mGET /1132 [36m304 [90m14ms[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m1ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m4ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m3ms[0m
+[90mGET /javascripts/admin.js [36m304 [90m5ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m7ms[0m
+[90mGET /javascripts/client.js [36m304 [90m11ms[0m
+[90mGET /player_list.json [32m200 [90m1ms - 6.83kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [36m304 [90m0ms[0m
+resetted players 
+resetted everything to default
+[90mGET /resetAll [32m200 [90m22ms - 7[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m10ms - 28[0m
+http://graph.facebook.com/asif1702/picture?width=300&height=300
+{ playerNumber: 1,
+  name: 'Asif',
+  profileImage: '/images/men.jpg',
+  points: 0,
+  _id: 523933b2ac8398b41c000001 }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m31ms - 40[0m
+[90mGET / [32m200 [90m14ms - 1.91kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m3ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m6ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m10ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m12ms[0m
+[90mGET /javascripts/client.js [36m304 [90m14ms[0m
+info: handshake authorized t2sLdVDJ8NUSGv_bawuO
+[90mGET /images/men.jpg [36m304 [90m2ms[0m
+[90mGET /font/DS-DIGI.TTF [36m304 [90m0ms[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m13ms - 28[0m
+/images/men.jpg
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Varutha Padatha Valibar Sangam',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/asif1702/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m28ms - 40[0m
+[90mGET /images/men.jpg [36m304 [90m1ms[0m
+[90mGET /1132 [32m200 [90m16ms - 3.55kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m3ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m6ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m10ms[0m
+[90mGET /javascripts/admin.js [36m304 [90m14ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m17ms[0m
+[90mGET /javascripts/client.js [36m304 [90m1ms[0m
+[90mGET /player_list.json [36m304 [90m2ms[0m
+http://graph.facebook.com/ramsdeenu/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m19ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Ramasamy',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m42ms - 40[0m
+/images/men.jpg
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m13ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Varutha Padatha Valibar Sangam',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/ramsdeenu/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m43ms - 40[0m
+[90mGET /images/men.jpg [36m304 [90m2ms[0m
+http://graph.facebook.com/subha.nuleti.14/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m18ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Warriors',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m42ms - 40[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m11ms - 28[0m
+/images/men.jpg
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Blasters',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/subha.nuleti.14/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m27ms - 40[0m
+[90mGET /images/men.jpg [36m304 [90m0ms[0m
+[90mGET / [32m200 [90m10ms - 1.87kb[0m
+info: transport end (socket end)
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m6ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m151ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m155ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m158ms[0m
+[90mGET /javascripts/client.js [36m304 [90m163ms[0m
+[90mGET /javascripts/client.js [36m304 [90m0ms[0m
+info: handshake authorized 9Di6mh-KNfZRguMOawuP
+[90mGET /images/men.jpg [36m304 [90m0ms[0m
+[90mGET /1132 [32m200 [90m27ms - 3.53kb[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m3ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m11ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m17ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m16ms[0m
+[90mGET /javascripts/client.js [36m304 [90m9ms[0m
+[90mGET /javascripts/admin.js [32m200 [90m35ms - 7.66kb[0m
+[90mGET /javascripts/client.js [36m304 [90m1ms[0m
+[90mGET /player_list.json [36m304 [90m0ms[0m
+http://graph.facebook.com/syed491/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m17ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Varutha Padatha Valibar Sangam',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m45ms - 40[0m
+/images/men.jpg
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m20ms - 28[0m
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Blasters',
+  playerNumber: 1,
+  points: 0,
+  profileImage: 'http://graph.facebook.com/syed491/picture?width=300&height=300' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m40ms - 40[0m
+[90mGET /images/men.jpg [36m304 [90m2ms[0m

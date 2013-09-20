@@ -1,0 +1,243 @@
+info: socket.io started
+Express server listening on port 3000
+connected db
+[90mGET / [36m304 [90m137ms[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m14ms[0m
+[90mGET /images/GE_logo.png [36m304 [90m16ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m14ms[0m
+[90mGET /javascripts/client.js [36m304 [90m16ms[0m
+[90mGET /stylesheets/style.css [32m200 [90m33ms - 2kb[0m
+info: handshake authorized k3cxaNoHrEQeJFQYAvs0
+[90mGET /images/men.jpg [36m304 [90m1ms[0m
+[90mGET /font/DS-DIGI.TTF [36m304 [90m4ms[0m
+[90mGET /1132 [36m304 [90m28ms[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m4ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m8ms[0m
+[90mGET /javascripts/jquery.min.js [36m304 [90m16ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m11ms[0m
+[90mGET /javascripts/client.js [36m304 [90m16ms[0m
+[90mGET /javascripts/admin.js [32m200 [90m36ms - 8.68kb[0m
+[90mGET /player_list.json [32m200 [90m2ms - 7.01kb[0m
+[90mGET /stylesheets/bootstrap/fonts/glyphicons-halflings-regular.woff [36m304 [90m2ms[0m
+{ player: '1', score: '0' }
+points updated for player1
+[90mPOST /push [32m200 [90m30ms - 7[0m
+{ player: '1', score: '1' }
+points updated for player1
+[90mPOST /push [32m200 [90m17ms - 7[0m
+{ player: '1', score: '2' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '3' }
+points updated for player1
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '1', score: '4' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '5' }
+points updated for player1
+[90mPOST /push [32m200 [90m13ms - 7[0m
+{ player: '1', score: '6' }
+points updated for player1
+[90mPOST /push [32m200 [90m24ms - 7[0m
+{ player: '1', score: '7' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '8' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '9' }
+points updated for player1
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '1', score: '10' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '1', score: '11' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '2', score: '0' }
+points updated for player2
+[90mPOST /push [32m200 [90m17ms - 7[0m
+{ player: '2', score: '1' }
+points updated for player2
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '2', score: '2' }
+points updated for player2
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '2', score: '3' }
+points updated for player2
+[90mPOST /push [32m200 [90m19ms - 7[0m
+{ player: '2', score: '4' }
+points updated for player2
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '2', score: '5' }
+points updated for player2
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '2', score: '6' }
+points updated for player2
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '2', score: '7' }
+points updated for player2
+[90mPOST /push [32m200 [90m14ms - 7[0m
+{ player: '2', score: '8' }
+points updated for player2
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '2', score: '9' }
+points updated for player2
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '2', score: '10' }
+points updated for player2
+[90mPOST /push [32m200 [90m14ms - 7[0m
+{ player: '2', score: '11' }
+points updated for player2
+[90mPOST /push [32m200 [90m20ms - 7[0m
+{ player: '1', score: '12' }
+points updated for player1
+[90mPOST /push [32m200 [90m17ms - 7[0m
+[90mGET /triggerPlayerWin?player=1 [33m404 [90m5ms[0m
+{ player: '2', score: '12' }
+points updated for player2
+[90mPOST /push [32m200 [90m17ms - 7[0m
+{ player: '1', score: '13' }
+points updated for player1
+[90mPOST /push [32m200 [90m19ms - 7[0m
+[90mGET /triggerPlayerWin?player=1 [33m404 [90m3ms[0m
+inserted round data
+[90mPOST /recordRoundInfo [32m200 [90m19ms - 32[0m
+resetted scores
+successfully resetted
+[90mGET /resetScores [32m200 [90m13ms - 7[0m
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m11ms - 28[0m
+http://graph.facebook.com/karthi.kasthuri/picture?width=300&height=300
+{ _id: 523933b2ac8398b41c000001,
+  name: 'Karthi Kasthuri',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m32ms - 40[0m
+http://graph.facebook.com/samramkumar/picture?width=300&height=300
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m18ms - 28[0m
+{ _id: 523933b2ac8398b41c000002,
+  name: 'Ramkumar',
+  playerNumber: 2,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m39ms - 40[0m
+{ player: '1', score: '0' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '1', score: '1' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '1', score: '2' }
+points updated for player1
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '1', score: '3' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '4' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '5' }
+points updated for player1
+[90mPOST /push [32m200 [90m17ms - 7[0m
+{ player: '1', score: '6' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '7' }
+points updated for player1
+[90mPOST /push [32m200 [90m20ms - 7[0m
+{ player: '1', score: '8' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '2', score: '0' }
+points updated for player2
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '2', score: '1' }
+points updated for player2
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '2', score: '2' }
+points updated for player2
+[90mPOST /push [32m200 [90m14ms - 7[0m
+{ player: '1', score: '9' }
+points updated for player1
+[90mPOST /push [32m200 [90m30ms - 7[0m
+{ player: '1', score: '10' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+inserted round data
+[90mPOST /recordRoundInfo [32m200 [90m13ms - 32[0m
+resetted players 
+resetted everything to default
+[90mGET /resetAll [32m200 [90m175ms - 7[0m
+[90mGET /images/men.jpg [36m304 [90m2ms[0m
+[90mGET /admin/rounds [32m200 [90m16ms - 961[0m
+[90mGET /stylesheets/bootstrap/css/bootstrap.min.css [36m304 [90m6ms[0m
+[90mGET /stylesheets/style.css [36m304 [90m13ms[0m
+[90mGET /javascripts/angular.js [36m304 [90m17ms[0m
+[90mGET /javascripts/client.js [36m304 [90m23ms[0m
+player name updated for player2
+[90mPOST /updatePlayerName/2 [32m200 [90m11ms - 28[0m
+http://graph.facebook.com/fraizal/picture?width=300&height=300
+{ _id: 5239e39865dd5fa412000004,
+  name: 'Fraizal',
+  playerNumber: 2,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player2
+affected 1 docs
+[90mPOST /admin/updateUserPicture/2 [32m200 [90m30ms - 40[0m
+http://graph.facebook.com/lovelin.edward/picture?width=300&height=300
+player name updated for player1
+[90mPOST /updatePlayerName/1 [32m200 [90m16ms - 28[0m
+{ _id: 5239e39865dd5fa412000003,
+  name: 'Lovelin',
+  playerNumber: 1,
+  points: 0,
+  profileImage: '/images/men.jpg' }
+imageSource updated for player1
+affected 1 docs
+[90mPOST /admin/updateUserPicture/1 [32m200 [90m39ms - 40[0m
+{ player: '1', score: '0' }
+points updated for player1
+[90mPOST /push [32m200 [90m19ms - 7[0m
+{ player: '1', score: '1' }
+points updated for player1
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '1', score: '2' }
+points updated for player1
+[90mPOST /push [32m200 [90m14ms - 7[0m
+{ player: '1', score: '3' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '1', score: '4' }
+points updated for player1
+[90mPOST /push [32m200 [90m15ms - 7[0m
+{ player: '1', score: '5' }
+points updated for player1
+[90mPOST /push [32m200 [90m14ms - 7[0m
+{ player: '1', score: '6' }
+points updated for player1
+[90mPOST /push [32m200 [90m18ms - 7[0m
+{ player: '1', score: '7' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+{ player: '1', score: '8' }
+points updated for player1
+[90mPOST /push [32m200 [90m20ms - 7[0m
+{ player: '1', score: '9' }
+points updated for player1
+[90mPOST /push [32m200 [90m31ms - 7[0m
+{ player: '1', score: '10' }
+points updated for player1
+[90mPOST /push [32m200 [90m17ms - 7[0m
+{ player: '1', score: '11' }
+points updated for player1
+[90mPOST /push [32m200 [90m16ms - 7[0m
+info: transport end (socket end)
