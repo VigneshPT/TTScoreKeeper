@@ -193,9 +193,9 @@ $(document).ready(function () {
             var imageSource = "";
             if (profilePic == null || profilePic == "")
                 imageSource = "/images/men.jpg";
-            //else if (profilePic.contains("http")) {
-            //    imageSource = profilePic;
-            //}
+            else if (profilePic.indexOf("http")!=-1) {
+                imageSource = profilePic;
+            }
             else
                 imageSource = "http://graph.facebook.com/" + profilePic + "/picture?width=300&height=300";
 
