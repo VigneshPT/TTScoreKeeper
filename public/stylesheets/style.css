@@ -35,7 +35,7 @@ a {
 .home-page-wrap .title-image img{float: left;}
 .home-page-wrap .title-text{font-size: 24px;
 padding-left: 10px;}
-.home-page-wrap .title-container{left: 22%;position: relative;}
+.home-page-wrap .title-container{margin:20px auto;width:565px;}
 /*.set-picture-button{float: right;}*/
 
 .well{
