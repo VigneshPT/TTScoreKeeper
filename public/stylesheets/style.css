@@ -8,7 +8,6 @@
 }
 
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -31,19 +30,27 @@ a {
     font-size: 40px;
     color: #fff;
 }
-
+.home-player-name{min-height: 60px;}
 .home-page-wrap .title-image img{float: left;}
 .home-page-wrap .title-text{font-size: 24px;
 padding-left: 10px;}
 .home-page-wrap .title-container{margin:20px auto;width:565px;}
 /*.set-picture-button{float: right;}*/
 
+.img-circle{max-width: 100%;
+position: relative;
+left: -19px;}
+
 .well{
     padding: 0px !important;
 }
 
-.player-points{font-family:DigitalScoreBoard;/*font-sizefont-size: 197px;line-height: 149px;*/ font-size: 400px;
-line-height: 400px;text-align: center;}
+.player-points{font-family: DigitalScoreBoard;
+font-size: 370px;
+line-height: 343px;
+text-align: center;
+position: relative;
+left: -68px;}
 
 .next-round-button{margin-bottom: 10px;}
 .next-round-button span{padding-right: 10px;}
