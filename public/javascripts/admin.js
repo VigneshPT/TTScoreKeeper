@@ -104,6 +104,7 @@ $(document).ready(function () {
         //socket.emit('playerWon', player);
         $.ajax({
             url: "/triggerPlayerWin",
+            type:"POST",
             data: "player=" + player,
             success: function (successmessage) { console.log(successmessage); },
             error: function (errormessage) { console.log(errormessage); }
