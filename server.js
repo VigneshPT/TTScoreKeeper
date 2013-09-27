@@ -52,20 +52,20 @@ app.get('/getPlayers', function (req, res) {
 
 app.post('/admin/updateUserPicture/:number', function (req, res) {
     var playernumber = req.params.number;
-    var imageSource = (req.body).src;
-    console.log(imageSource);
-    if(imageSource === "")
-        imageSource = "default";
-    playerProvider.updateProfilePic(playernumber, imageSource, function (error) {
-        if (error) console(error);
-        res.send("successfully updated db with imagesource");
-        if (isConnected) {
-            playerProvider.getPlayers(function (err, _players) {
-                if (!err)
-                    isConnected.emit('updatePlayers', {players:_players,advanceRound:0});//players);
-                else
-                    console.log('error ' + err);
-            });
+    var imageSources = (req.body).src;
+    console.log(imageSources);
+    playerProvider.updateProfilePic(playernumber, JSON.parse(imageSources), function(error){
+        if(error) console.log(error);
+        else{
+            res.send('successfully updated db with imagesources');
+            if (isConnected) {
+                 playerProvider.getPlayers(function (err, _players) {
+                     if (!err)
+                         isConnected.emit('updatePlayers', {players:_players,advanceRound:0});//players);
+                     else
+                         console.log('error ' + err);
+                 });
+             }
         }
     });
 });
@@ -135,7 +135,7 @@ app.get('/resetAll', function (req, res) {
 app.post('/updatePlayerName/:number', function (req, res) {
     //console.log(req.body);
     var pnumber = req.params.number;
-    playerProvider.updatePlayerName(pnumber, req.body.pname, function (err, result) {
+    playerProvider.updatePlayerName(pnumber, req.body.pname, req.body.ptype, function (err, result) {
         if (err) { console.log('error updating player name: ' + err); res.send('error'); }
         else {
             res.send('success: updated player name');
@@ -219,6 +219,17 @@ app.post('/triggerPlayerWin',function(req,res){
     //listen when a player has won
     isConnected.emit('playerWon', req.body.player);
     res.send('player'+player +" has won");
+});
+
+//testing code
+app.post('/updatePlayerObject',function(req,res){
+    console.log(JSON.parse(req.body.player));
+    playerProvider.updatePlayer(JSON.parse(req.body.player),function(err,result){
+        if(err) res.send('error '+err);
+        else{
+            res.send('success, updated player object'+result);
+        }
+    });
 });
 
 

@@ -163,34 +163,77 @@ $(document).ready(function () {
         $('.player-dropdown').append($("<option></option>").attr({ "value": -1, "profilePic": "" }).text("Select Option"));
         for (var i = 0; i < singlesArray.length; i++) {
             players.push(singlesArray[i]);
-            $('.player-dropdown').append($("<option></option>").attr({ "value": players[i].id, "profilePic": players[i].profilePic }).text(players[i].name));
+            $('.player-dropdown').append($("<option></option>").attr({ "value": players[i].id, "profilePic1": players[i].profilePic, "profilePic2":"","type":"single" }).text(players[i].name));
         }
         var doublesArray = data.doubles;
         for (var i = 0; i < doublesArray.length; i++) {
             players.push({
                 id: doublesArray[i].id,
                 name: doublesArray[i].name,
-                profilePic: doublesArray[i].profilePic[Math.round(Math.random())]
+                profilePic: doublesArray[i].profilePic//doublesArray[i].profilePic[Math.round(Math.random())]
             });
-            $('.player-dropdown').append($("<option></option>").attr({ "value": players[players.length - 1].id, "profilePic": players[players.length - 1].profilePic }).text(players[players.length - 1].name));
+            $('.player-dropdown').append($("<option></option>").attr({ "value": players[players.length - 1].id, "profilePic1": players[players.length - 1].profilePic[0],"profilePic2":players[players.length - 1].profilePic[1],"type":"double" }).text(players[players.length - 1].name));
         }
     });
     $(".player-dropdown").change(function () {
         var playernumber = this.id == "playerDropdown1" ? 1 : 2;
         var name = $(this).find("option:selected").text();
-        var profilePic = $(this).find("option:selected").attr("profilePic");
+        var profilePics =[];
+        profilePics.push($(this).find("option:selected").attr("profilePic1"));
+        profilePics.push($(this).find("option:selected").attr("profilePic2"));
         var val = $(this).find("option:selected").attr("value");
+        var type = $(this).find('option:selected').attr('type');
+        var player = {
+            playerNumber: playernumber,
+            name: name,
+            type: type,
+            profileImages:profilePics
+        };
+
+        /*
+        $.ajax({
+            url:'/updatePlayerObject',
+            type:'POST',
+            processData:false,
+            data: 'player='+JSON.stringify(player),
+            success: function(successmessage){console.log(successmessage);},
+            error: function(errormessage){console.log(errormessage);}
+        });
+        */
+
         //to update playerName
         if (val != -1) {
             $.ajax({
                 url: '/updatePlayerName/' + playernumber,
                 type: 'POST',
                 processData: false,
-                data: 'pname=' + name,
+                data: 'pname=' + name+'&ptype='+type,
                 success: function (successmessage) { console.log(successmessage); },
                 error: function (errormessage) { console.log(errormessage); }
             });
             $('#player' + playernumber + 'namelabel').text(name);
+            
+            var imageSources = [];
+            for(var i=0;i<profilePics.length;i++){
+                if(profilePics[i]==null || profilePics[i]==""){
+                    imageSources.push("");
+                }
+                else if(profilePics[i].indexOf("http")!=-1){
+                    imageSources.push(encodeURIComponent(profilePics[i]));
+                }
+                else
+                    imageSources.push(encodeURIComponent("http://graph.facebook.com/" + profilePics[i] + "/picture?width=300&height=300"));
+            }
+            $.ajax({
+                url: "http://" + location.host + '/admin/updateUserPicture/' + playernumber,
+                type: "POST",
+                processData: false,
+                data: 'src=' + JSON.stringify(imageSources),
+                success: function (data) { console.log(data); },
+                error: function () { console.log('error'); }
+
+            });
+            /*
             var imageSource = "";
             if (profilePic == null || profilePic == "")
                 imageSource = "/images/men.jpg";
@@ -199,7 +242,7 @@ $(document).ready(function () {
             }
             else
                 imageSource = "http://graph.facebook.com/" + profilePic + "/picture?width=300&height=300";
-
+            
             $.ajax({
                 url: "http://" + location.host + '/admin/updateUserPicture/' + playernumber,
                 type: "POST",
@@ -209,6 +252,7 @@ $(document).ready(function () {
                 error: function () { console.log('error'); }
 
             });
+            */
         }
     });
 });

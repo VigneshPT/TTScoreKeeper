@@ -110,7 +110,7 @@ PlayerProvider.prototype.getSecondPlayer = function (callback) {
     });
 };
 
-PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, callback) {
+PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSources, callback) {
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
@@ -118,10 +118,10 @@ PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, cal
                 if (findError)
                     console.log('find error');
                 else {
-                    console.log(playerToUpdate);
-                    players.update({ _id: new ObjectId(playerToUpdate._id.toString()) }, { $set: { profileImage: imageSource} }, { multi: false, safe: true }, function (updateError, result) {
+                    //console.log(playerToUpdate);
+                    players.update({ _id: new ObjectId(playerToUpdate._id.toString()) }, { $set: { profileImages: imageSources} }, { multi: false, safe: true }, function (updateError, result) {
                         if (!updateError) {
-                            console.log("imageSource updated for player" + playerNo);
+                            console.log("imageSources updated for player" + playerNo);
                             console.log('affected ' + result + " docs");
                             callback();
                         }
@@ -133,6 +133,7 @@ PlayerProvider.prototype.updateProfilePic = function (playerNo, imageSource, cal
         }
     });
 };
+
 
 PlayerProvider.prototype.updateScore = function (playerNo, score, callback) {
 
@@ -151,11 +152,11 @@ PlayerProvider.prototype.updateScore = function (playerNo, score, callback) {
     });
 };
 
-PlayerProvider.prototype.updatePlayerName = function (playerNo, _name, callback) {
+PlayerProvider.prototype.updatePlayerName = function (playerNo, _name,_type, callback) {
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-            players.update({ playerNumber: parseInt(playerNo) }, { $set: { name: _name} }, { multi: false, safe: true }, function (err, result) {
+            players.update({ playerNumber: parseInt(playerNo) }, { $set: { name: _name, type:_type} }, { multi: false, safe: true }, function (err, result) {
                 if (err) { console.log("error updating player name: " + err); callback(err); }
                 else {
                     console.log('player name updated for player' + playerNo);
@@ -166,17 +167,19 @@ PlayerProvider.prototype.updatePlayerName = function (playerNo, _name, callback)
     });
 };
 
+//not yet used
 PlayerProvider.prototype.updatePlayer = function (player, callback) {
     this.getPlayerCollection(function (error, players) {
         if (error) callback(error);
         else {
-            players.update({ playerNumber: player.playerNumber }, player, { multi: false }, function (err, result) {
-                if (err) { console.log("error updating player"); callback(err); }
-                else {
-                    console.log("player " + player.playerNumber + " updated");
-                    callback(null, result);
-                }
-            });
+            console.log(JSON.stringify(player));
+            // players.update({ playerNumber: player.playerNumber }, {$set: JSON.stringify(player)}, { multi: false }, function (err, result) {
+            //     if (err) { console.log("error updating player"); callback(err); }
+            //     else {
+            //         console.log("player " + player.playerNumber + " updated");
+            //         callback(null, result);
+            //     }
+            // });
         }
     });
 };
@@ -185,13 +188,15 @@ var defaultPlayers = [
     {
         playerNumber: 1,
         name: "Home",
-        profileImage: "/images/men.jpg",
+        type:"single",  //or double
+        profileImages: ["/images/men.jpg"],
         points: 0
     },
     {
         playerNumber: 2,
         name: "Away",
-        profileImage: "/images/men.jpg",
+        type:"single",
+        profileImages: ["/images/men.jpg"],
         points: 0
     }
 ];
