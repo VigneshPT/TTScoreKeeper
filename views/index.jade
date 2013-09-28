@@ -1,6 +1,7 @@
 extends layout
 
 block content
+    script(type='text/javascript', src='/javascripts/client.js')
     script.
         var players = !{JSON.stringify(players)};
     div.row.home-page-wrap
