@@ -97,7 +97,7 @@ $(document).ready(function () {
         var name = prompt("Enter name: ");
         var param = null;
         if (this.id == 'editpname1') {
-            if (name="") {
+            if (name=="") {
                 name = "Home";
             }
             $('#player1namelabel').text(name);
