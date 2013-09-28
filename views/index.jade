@@ -22,7 +22,7 @@ block content
                             div.col-md-12
                                 div.col-md-6()
                                     img.img-circle(ng-src='{{player1.profileImages[0]}}')
-                                    img.img-circle(ng-src='{{player1.profileImages[1]}}', ng-hide="player1.profileImages[1] == '' || player1.profileImages[1] == null")
+                                    img.img-circle(ng-src='{{player1.profileImages[1]}}', ng-hide="player1.type=='single'")
                                 div.col-md-6
                                     h3 Points
                                         div.player-points(id='player-points-1', ng-bind="player1.points")
@@ -33,7 +33,7 @@ block content
                             div.col-md-12
                                 div.col-md-6
                                     img.img-circle(ng-src='{{player2.profileImages[0]}}')
-                                    img.img-circle(ng-src='{{player2.profileImages[1]}}',ng-hide="player2.profileImages[1] == '' || player2.profileImages[1] == null")
+                                    img.img-circle(ng-src='{{player2.profileImages[1]}}',ng-hide="player2.type=='single'")
                                 div.col-md-6
                                     h3 Points 
                                         div.player-points(id='player-points-2', ng-bind="player2.points")

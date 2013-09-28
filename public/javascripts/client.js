@@ -3,17 +3,23 @@ var app = angular.module("tt", []);
 app.controller('master', ["$scope", "$http", function ($scope, $http) {
     $scope.player1 = players[0] || { name: "Home", points: 0, type:"single", profileImages: ["/images/men.jpg"] };
     $scope.player2 = players[1] || { name: "Away", points: 0, type:"single", profileImages: ["/images/men.jpg"] };
-    /*
+    
     $scope.$watch("player1", function (newValue, oldValue) {
-        if (newValue.profileImage === "default") {
-            $scope.player1.profileImage = "/images/men.jpg"
+        if (newValue.profileImages[0]== "") {
+            $scope.player1.profileImages[0] = "/images/men.jpg"
+        }
+        if(newValue.profileImages[1]==""){
+            $scope.player1.profileImages[1] = "/images/men.jpg"    
         }
     });
     $scope.$watch("player2", function (newValue, oldValue) {
-        if (newValue.profileImage === "default") {
-            $scope.player2.profileImage = "/images/men.jpg"
+        if (newValue.profileImages[0]== "") {
+            $scope.player2.profileImages[0] = "/images/men.jpg"
         }
-    }); */
+        if(newValue.profileImages[1]==""){
+            $scope.player2.profileImages[1] = "/images/men.jpg"    
+        }
+    });
     var socket = io.connect("http://" + location.host);
     $scope.round = 1;
     socket.on('updateCount', function (e) {
