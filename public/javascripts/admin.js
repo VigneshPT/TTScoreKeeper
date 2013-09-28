@@ -290,4 +290,24 @@ $(document).ready(function () {
             */
         }
     });
+    //listening to socket events and updating the UI. 
+    var updatePlayerPoints = function(e){
+        $('#player1Points').text(e[0].points);
+        $('#player2Points').text(e[1].points);
+    };
+    socket.on('updateCount', function (e) {
+        updatePlayerPoints(e);
+    });
+    socket.on('negateCount', function (e) {
+        updatePlayerPoints(e);
+    });
+
+
+    socket.on('connected', function () {
+        console.log('Congrats admin, you are connected successfully');
+    });
+
+    socket.on('updatePlayers', function (data) {
+        updatePlayerPoints(e);
+    });
 });
