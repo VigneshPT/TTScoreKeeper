@@ -295,6 +295,11 @@ $(document).ready(function () {
         $('#player1Points').text(e[0].points);
         $('#player2Points').text(e[1].points);
     };
+    var updatePlayerNames = function(e)
+    {
+        $('#player1namelabel').text(e.players[0].name);
+        $('#player2namelabel').text(e.players[1].name);
+    }
     socket.on('updateCount', function (e) {
         updatePlayerPoints(e);
     });
@@ -307,7 +312,8 @@ $(document).ready(function () {
         console.log('Congrats admin, you are connected successfully');
     });
 
-    socket.on('updatePlayers', function (data) {
-        updatePlayerPoints(e);
+    socket.on('updatePlayers', function (e) {
+        updatePlayerPoints(e.players);
+        updatePlayerNames(e);
     });
 });
