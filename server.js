@@ -235,7 +235,131 @@ app.post('/updatePlayerObject',function(req,res){
 
 io.sockets.on('connection', function (socket) {
     isConnected = socket;
-    isConnected.emit('connected');
+    io.sockets.emit('connected');
+
+    isConnected.on('updateUserPicture',function(jsonData){
+        var playernumber = jsonData.number;
+        var imageSources = jsonData.src;
+        console.log(imageSources);
+        playerProvider.updateProfilePic(playernumber, JSON.parse(imageSources), function(error){
+            if(error) console.log(error);
+            else{
+                //res.send('successfully updated db with imagesources');
+                if (isConnected) {
+                     playerProvider.getPlayers(function (err, _players) {
+                         if (!err)
+                             io.sockets.emit('updatePlayers', {players:_players,advanceRound:0});//players);
+                         else
+                             console.log('error ' + err);
+                     });
+                 }
+            }
+        });
+    });
+
+    isConnected.on('resetScores',function(){
+        playerProvider.resetScores(function (err, result) {
+            if (err) { console.log(err); }
+            else { 
+                console.log('successfully resetted'); 
+                //var _advanceRound =req.params.advanceRound;
+                if (isConnected) {
+                    playerProvider.getPlayers(function (err, _players) {
+                        if (!err)
+                            io.sockets.emit('updatePlayers', {players:_players,advanceRound:1});
+                        else
+                            console.log('error ' + err);
+                    });
+                }
+                //res.send('success'); 
+            }
+        });
+    });
+
+    isConnected.on('recordRoundInfo',function(jsonData){
+        var date = new Date();
+        var _readableTimestamp = date.timeNow() + ", "+ date.today();
+        var data = {
+            p1Name : jsonData.p1Name,
+            p1Score: jsonData.p1Score,
+            p2Name: jsonData.p2Name,
+            p2Score: jsonData.p2Score,
+            readableTimestamp: _readableTimestamp,
+            timestamp: Date.now()
+            
+        }
+        playerProvider.insertRoundData(data,function(error,docs){
+            if(error) console.log('error inserting round data');
+            else{
+                console.log('successfully inserted round data');
+            }
+        });
+    });
+
+    isConnected.on('resetAll',function(){
+        playerProvider.resetPlayers(function (err, result) {
+            if (err) { console.log(err); }
+            else { 
+                console.log('resetted everything to default'); 
+                if (isConnected) {
+                    playerProvider.getPlayers(function (err, _players) {
+                        if (!err)
+                            io.sockets.emit('updatePlayers', {players:_players,advanceRound:2}); // advanceRound:2 for resetting the Round
+                        else
+                            console.log('error ' + err);
+                    });
+                } 
+            }
+        });
+    });
+
+    isConnected.on('updatePlayerName',function(jsonData){
+        var pnumber = jsonData.number;
+        playerProvider.updatePlayerName(pnumber, jsonData.pname, jsonData.ptype, function (err, result) {
+            if (err) { console.log('error updating player name: ' + err);  }
+            else {
+                console.log('success: updated player name');
+                if (isConnected) {
+                    playerProvider.getPlayers(function (err, _players) {
+                        if (!err)
+                            io.sockets.emit('updatePlayers', {players:_players,advanceRound:0});//players);
+                        else
+                            console.log('error ' + err);
+                    });
+                }
+            }
+        });
+    });
+
+    isConnected.on('triggerPlayerWin',function(data){
+        io.sockets.emit('playerWon', data.player);
+        console.log('player'+data.player +" has won");
+    });
+
+    isConnected.on('/push',function(jsonData){
+        console.log(jsonData);
+        playerProvider.updateScore(jsonData.player, parseInt(jsonData.score,10)+1, function (err, result) {
+            if (err) { console.log('could not update player to db: ' + err); }
+            else {
+                playerProvider.getPlayers(function (error, players) {
+                    if (error) { console.log('could not get players [in push post]' + error); }
+                    else {io.sockets.emit("updateCount", players); console.log('success'); }
+                });
+            }
+        });
+    });
+
+    isConnected.on('/pop',function(jsonData){
+        playerProvider.updateScore(jsonData.player, parseInt(jsonData.score,10)-1, function (err, result) {
+            if (err) { console.log('could not update player to db: ' + err); }
+            else {
+                playerProvider.getPlayers(function (error, players) {
+                    if (error) { console.log('could not get players [in pop post]' + error); }
+                    else {io.sockets.emit("negateCount", players); console.log('success'); }
+                });
+            }
+        });
+    });
     //    var timer = setInterval(function () { socket.emit('updateCount'); }, 1000);
     //    socket.on('stopUpdating', function () { clearInterval(timer); });
 });

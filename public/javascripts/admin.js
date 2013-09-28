@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var socket = io.connect();
     $(".set-picture-button").click(function () {
         var profileId = prompt("Enter Facebook profile id (example: vigneshpt)", "");
         var imageSource = "";
@@ -6,66 +7,86 @@ $(document).ready(function () {
             imageSource = "http://graph.facebook.com/" + profileId + "/picture?width=300&height=300";
         //var dataToSend = { "src": encodeURI(imageSource) };
         if (this.id == 'player1SetPicture') {
-            $.ajax({
-                url: "http://" + location.host + '/admin/updateUserPicture/1',
-                type: "POST",
-                processData: false,
-                data: 'src=' + encodeURIComponent(imageSource), //encodeURI(imageSource),
-                success: function (data) { console.log(data); },
-                error: function () { console.log('error'); }
+            socket.emit('updateUserPicture',{number:1,src:JSON.stringify([imageSource,""])});
 
-            });
+            // $.ajax({
+            //     url: "http://" + location.host + '/admin/updateUserPicture/1',
+            //     type: "POST",
+            //     processData: false,
+            //     data: 'src=' + encodeURIComponent(imageSource), //encodeURI(imageSource),
+            //     success: function (data) { console.log(data); },
+            //     error: function () { console.log('error'); }
+
+            // });
         }
         else if (this.id == 'player2SetPicture') {
-            $.ajax({
-                url: "http://" + location.host + '/admin/updateUserPicture/2',
-                type: "POST",
-                processData: false,
-                data: 'src=' + encodeURIComponent(imageSource),
-                success: function (data) { console.log(data); },
-                error: function () { console.log('error'); }
+            socket.emit('updateUserPicture',{number:2,src:JSON.stringify([imageSource,""])});
+            // $.ajax({
+            //     url: "http://" + location.host + '/admin/updateUserPicture/2',
+            //     type: "POST",
+            //     processData: false,
+            //     data: 'src=' + encodeURIComponent(imageSource),
+            //     success: function (data) { console.log(data); },
+            //     error: function () { console.log('error'); }
 
-            });
+            // });
         }
     });
 
     $('#nextroundbtn').click(function () {
-        $.ajax({
-            url: '/resetScores',
-            type: 'GET',
-            processData: false,
-            success: function (successmessage) { console.log(successmessage); },
-            error: function (errormessage) { console.log(errormessage); }
-        });
+        socket.emit('resetScores');
+        // $.ajax({
+        //     url: '/resetScores',
+        //     type: 'GET',
+        //     processData: false,
+        //     success: function (successmessage) { console.log(successmessage); },
+        //     error: function (errormessage) { console.log(errormessage); }
+        // });
         //sending the round info. 
-        $.ajax({
-            url: '/recordRoundInfo',
-            type: 'POST',
-            processData: false,
-            data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
-            success: function (successmessage) { console.log('updated round info'); },
-            error: function (errormessage) { console.log('error updating round info'); }
+        socket.emit('recordRoundInfo',{
+            p1Name:$('#player1namelabel').text(),
+            p2Name:$('#player2namelabel').text(),
+            p1Score: $('#player1Points').text(),
+            p2Score: $('#player2Points').text()
         });
+
+        // $.ajax({
+        //     url: '/recordRoundInfo',
+        //     type: 'POST',
+        //     processData: false,
+        //     data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
+        //     success: function (successmessage) { console.log('updated round info'); },
+        //     error: function (errormessage) { console.log('error updating round info'); }
+        // });
         $('#player1Points').text(0);
         $('#player2Points').text(0);
     });
     $('#resetallbtn').click(function () {
-        $.ajax({
-            url: '/resetAll',
-            type: 'GET',
-            processData: false,
-            success: function (successmessage) { console.log(successmessage); },
-            error: function (errormessage) { console.log(errormessage); }
-        });
+        socket.emit('resetAll');
+
+        // $.ajax({
+        //     url: '/resetAll',
+        //     type: 'GET',
+        //     processData: false,
+        //     success: function (successmessage) { console.log(successmessage); },
+        //     error: function (errormessage) { console.log(errormessage); }
+        // });
         //sending the round info.. 
-        $.ajax({
-            url: '/recordRoundInfo',
-            type: 'POST',
-            processData: false,
-            data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
-            success: function (successmessage) { console.log('updated round info'); },
-            error: function (errormessage) { console.log('error updating round info'); }
+        
+        socket.emit('recordRoundInfo',{
+            p1Name:$('#player1namelabel').text(),
+            p2Name:$('#player2namelabel').text(),
+            p1Score: $('#player1Points').text(),
+            p2Score: $('#player2Points').text()
         });
+        // $.ajax({
+        //     url: '/recordRoundInfo',
+        //     type: 'POST',
+        //     processData: false,
+        //     data: 'p1Name=' + $('#player1namelabel').text() + '&p2Name=' + $('#player2namelabel').text() + '&p1Score=' + $('#player1Points').text() + '&p2Score=' + $('#player2Points').text(),
+        //     success: function (successmessage) { console.log('updated round info'); },
+        //     error: function (errormessage) { console.log('error updating round info'); }
+        // });
         $('#player1Points').text(0);
         $('#player2Points').text(0);
         $('#player1namelabel').text("Home");
@@ -89,26 +110,30 @@ $(document).ready(function () {
             $('#player2namelabel').text(name);
             param = 2;
         }
-        $.ajax({
-            url: '/updatePlayerName/' + param,
-            type: 'POST',
-            processData: false,
-            data: 'pname=' + name,
-            success: function (successmessage) { console.log(successmessage); },
-            error: function (errormessage) { console.log(errormessage); }
-        });
+
+        socket.emit('updatePlayerName',{number:param,pname:name,ptype:"single"});
+
+        // $.ajax({
+        //     url: '/updatePlayerName/' + param,
+        //     type: 'POST',
+        //     processData: false,
+        //     data: 'pname=' + name,
+        //     success: function (successmessage) { console.log(successmessage); },
+        //     error: function (errormessage) { console.log(errormessage); }
+        // });
     });
 
     $('.win-button').click(function () {
         var player = this.id == "player1WinButton" ? 1 : 2;
         //socket.emit('playerWon', player);
-        $.ajax({
-            url: "/triggerPlayerWin",
-            type:"POST",
-            data: "player=" + player,
-            success: function (successmessage) { console.log(successmessage); },
-            error: function (errormessage) { console.log(errormessage); }
-        });
+        socket.emit('triggerPlayerWin',{player:player});
+        // $.ajax({
+        //     url: "/triggerPlayerWin",
+        //     type:"POST",
+        //     data: "player=" + player,
+        //     success: function (successmessage) { console.log(successmessage); },
+        //     error: function (errormessage) { console.log(errormessage); }
+        // });
     });
 
     $('.updateScoreButton').click(function () {
@@ -146,14 +171,16 @@ $(document).ready(function () {
                 }
         }
         if (currentPoints > 0 || postURL == "/push") {
-            $.ajax({
-                url: postURL,
-                type: "POST",
-                processData: false,
-                data: 'player=' + player + '&score=' + currentPoints,
-                success: function (data) { console.log(data); $('#player' + player + 'Points').text(currentPoints + (postURL == "/push" ? (1) : (-1))); },
-                error: function (err) { console.log(err); }
-            });
+            socket.emit(postURL,{player:player,score:currentPoints});
+            $('#player' + player + 'Points').text(currentPoints + (postURL == "/push" ? (1) : (-1)));
+            // $.ajax({
+            //     url: postURL,
+            //     type: "POST",
+            //     processData: false,
+            //     data: 'player=' + player + '&score=' + currentPoints,
+            //     success: function (data) { console.log(data); $('#player' + player + 'Points').text(currentPoints + (postURL == "/push" ? (1) : (-1))); },
+            //     error: function (err) { console.log(err); }
+            // });
         }
     });
     var players = [];
@@ -203,14 +230,20 @@ $(document).ready(function () {
 
         //to update playerName
         if (val != -1) {
-            $.ajax({
-                url: '/updatePlayerName/' + playernumber,
-                type: 'POST',
-                processData: false,
-                data: 'pname=' + name+'&ptype='+type,
-                success: function (successmessage) { console.log(successmessage); },
-                error: function (errormessage) { console.log(errormessage); }
+            socket.emit('updatePlayerName',{
+                number:playernumber,
+                pname: name,
+                ptype: type
             });
+
+            // $.ajax({
+            //     url: '/updatePlayerName/' + playernumber,
+            //     type: 'POST',
+            //     processData: false,
+            //     data: 'pname=' + name+'&ptype='+type,
+            //     success: function (successmessage) { console.log(successmessage); },
+            //     error: function (errormessage) { console.log(errormessage); }
+            // });
             $('#player' + playernumber + 'namelabel').text(name);
             
             var imageSources = [];
@@ -219,20 +252,22 @@ $(document).ready(function () {
                     imageSources.push("");
                 }
                 else if(profilePics[i].indexOf("http")!=-1){
-                    imageSources.push(encodeURIComponent(profilePics[i]));
+                    imageSources.push(profilePics[i]);
                 }
                 else
-                    imageSources.push(encodeURIComponent("http://graph.facebook.com/" + profilePics[i] + "/picture?width=300&height=300"));
+                    imageSources.push("http://graph.facebook.com/" + profilePics[i] + "/picture?width=300&height=300");
             }
-            $.ajax({
-                url: "http://" + location.host + '/admin/updateUserPicture/' + playernumber,
-                type: "POST",
-                processData: false,
-                data: 'src=' + JSON.stringify(imageSources),
-                success: function (data) { console.log(data); },
-                error: function () { console.log('error'); }
 
-            });
+            socket.emit('updateUserPicture',{number:playernumber,src:JSON.stringify(imageSources)});
+            // $.ajax({
+            //     url: "http://" + location.host + '/admin/updateUserPicture/' + playernumber,
+            //     type: "POST",
+            //     processData: false,
+            //     data: 'src=' + JSON.stringify(imageSources),
+            //     success: function (data) { console.log(data); },
+            //     error: function () { console.log('error'); }
+
+            // });
             /*
             var imageSource = "";
             if (profilePic == null || profilePic == "")

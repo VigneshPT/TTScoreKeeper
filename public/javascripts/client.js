@@ -19,11 +19,15 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
     socket.on('updateCount', function (e) {
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
+        document.getElementById('player-points-1').style.color="#333";
+        document.getElementById('player-points-1').style.color="#333";
         $scope.$apply();
     });
     socket.on('negateCount', function (e) {
         $scope.player1.points = e[0].points;
         $scope.player2.points = e[1].points;
+        document.getElementById('player-points-1').style.color="#333";
+        document.getElementById('player-points-1').style.color="#333";
         $scope.$apply();
     });
 
