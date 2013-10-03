@@ -61,6 +61,21 @@ PlayerProvider.prototype.getRoundCollection = function(callback){
         else callback(null,round_collection);
     });
 }
+PlayerProvider.prototype.getPlayerBank = function(callback){
+    if(!globalDB) getDB();
+    globalDB.collection('players_bank',function(error,player_bank){
+        if(error) callback(error);
+        else callback(null,player_bank);
+    })
+};
+PlayerProvider.prototype.getAllPlayersFromBank = function(callback){
+    this.getPlayerBank(function(error,player_bank){
+        player_bank.find().sort({type:-1,name:1}).toArray(function(err,results){
+            if(err)callback(err);
+            else callback(null,results);
+        });
+    });
+};
 PlayerProvider.prototype.insertRoundData = function(data,callback){
   this.getRoundCollection(function(error,round_collection){
       round_collection.insert(data,{safe:true},function(err,docs){

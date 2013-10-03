@@ -183,23 +183,13 @@ $(document).ready(function () {
             // });
         }
     });
-    var players = [];
-    $.getJSON("/player_list.json", function (data) {
-
-        var singlesArray = data.singles;
+    $.getJSON("/getAllPlayers", function (allplayers) {
         $('.player-dropdown').append($("<option></option>").attr({ "value": -1, "profilePic": "" }).text("Select Option"));
-        for (var i = 0; i < singlesArray.length; i++) {
-            players.push(singlesArray[i]);
-            $('.player-dropdown').append($("<option></option>").attr({ "value": players[i].id, "profilePic1": players[i].profilePic, "profilePic2":"","type":"single" }).text(players[i].name));
-        }
-        var doublesArray = data.doubles;
-        for (var i = 0; i < doublesArray.length; i++) {
-            players.push({
-                id: doublesArray[i].id,
-                name: doublesArray[i].name,
-                profilePic: doublesArray[i].profilePic//doublesArray[i].profilePic[Math.round(Math.random())]
-            });
-            $('.player-dropdown').append($("<option></option>").attr({ "value": players[players.length - 1].id, "profilePic1": players[players.length - 1].profilePic[0],"profilePic2":players[players.length - 1].profilePic[1],"type":"double" }).text(players[players.length - 1].name));
+        for(var i=0;i<allplayers.length;i++){
+            if(allplayers[i].type=="single")
+                $('.player-dropdown').append($("<option></option>").attr({ "value": allplayers[i].id, "profilePic1": allplayers[i].profilePic, "profilePic2":"","type":"single" }).text(allplayers[i].name));
+            else
+                $('.player-dropdown').append($("<option></option>").attr({ "value": allplayers[i].id, "profilePic1": allplayers[i].profilePic[0],"profilePic2":allplayers[i].profilePic[1],"type":"double" }).text(allplayers[i].name));
         }
     });
     $(".player-dropdown").change(function () {

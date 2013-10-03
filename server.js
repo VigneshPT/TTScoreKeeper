@@ -232,6 +232,15 @@ app.post('/updatePlayerObject',function(req,res){
     });
 });
 
+app.get('/getAllPlayers',function(req,res){
+    playerProvider.getAllPlayersFromBank(function(err,results){
+        if(err) res.send('error getting list of players: '+ err);
+        else res.send(JSON.stringify(results));
+    });
+});
+app.post('/insertPlayerToBank',function(req,res){
+    
+});
 
 io.sockets.on('connection', function (socket) {
     isConnected = socket;
