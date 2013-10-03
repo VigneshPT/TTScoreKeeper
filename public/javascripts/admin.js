@@ -172,6 +172,7 @@ $(document).ready(function () {
         }
         if (currentPoints > 0 || postURL == "/push") {
             socket.emit(postURL,{player:player,score:currentPoints});
+            $('.loader-container').show();
             $('#player' + player + 'Points').text(currentPoints + (postURL == "/push" ? (1) : (-1)));
             // $.ajax({
             //     url: postURL,
@@ -294,6 +295,7 @@ $(document).ready(function () {
     var updatePlayerPoints = function(e){
         $('#player1Points').text(e[0].points);
         $('#player2Points').text(e[1].points);
+        $('.loader-container').hide();
     };
     var updatePlayerNames = function(e)
     {

@@ -4,8 +4,10 @@ extends layout
 block content
    script(src="/javascripts/jquery.min.js")
    script(src="/javascripts/admin.js")
-   div.loader-wrap
-        img(src='/images/loader.gif')
+   div.loader-container
+       div.loader-overlay
+       div.loader-wrap
+            img.loader-img(src='/images/loader.gif')
    div.container.admin-page-wrap
         div.row.text-center
             button.col-md-6.btn-lg.next-round-button(id='nextroundbtn')

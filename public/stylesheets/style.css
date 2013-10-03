@@ -70,6 +70,22 @@ left: -68px;}
     
 .rounds-table{border-spacing: 10px;
 border-collapse: separate;}
+.loader-overlay{position: fixed;
+top: 0;
+left: 0;
+background: #000;
+width: 100%;
+height: 100%;
+opacity: 0.12;
+z-index: 100;}
+.loader-wrap{width: 55px;
+z-index: 108;
+margin: 0 auto;
+position: absolute;
+top: 200px;
+left: 48%;}
+.loader-img{width:inherit;}
+.loader-container{display:none;}
 /* to look good on phone*/
 @media only screen and (max-width: 320px){  
     .player-name-label{font-size:small;float: none;text-align: center;}
