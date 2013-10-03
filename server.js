@@ -79,7 +79,7 @@ app.get('/', function(req,res){
     });
 });//routes.index);
 app.get('/users', user.list);
-app.get('/1132', function (req, res) {
+app.get('/cpanel', function (req, res) {
     playerProvider.getPlayers(function (err, _players) {
         if(!err)
             res.render('admin', { title: 'Admin',players:_players })
@@ -162,8 +162,6 @@ app.post('/push', function (req, res) {
             });
         }
     });
-    //isConnected.emit("updateCount", req.body);
-    //res.redirect('/1132');
 
 });
 
@@ -177,9 +175,6 @@ app.post('/pop', function(req, res){
             });
         }
     });
-
-    //isConnected.emit("negateCount", req.body.user);
-    // res.redirect('/1132');
 });
 
 Date.prototype.today = function() {
