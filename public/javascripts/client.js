@@ -48,7 +48,6 @@ app.controller('master', ["$scope", "$http", function ($scope, $http) {
         $scope.player1 = data.players[0];
         $scope.player2 = data.players[1];
         if (data.advanceRound == 1) {
-            if ($scope.round < 3)
                 $scope.round = parseInt($scope.round, 10) + 1;
         } //Advance to next round
         else if (data.advanceRound == 2)
